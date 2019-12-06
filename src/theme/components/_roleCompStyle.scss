@@ -1,0 +1,26 @@
+.role {
+	&--img {
+		position: relative;
+		animation-name: move;
+		animation-duration: 20s;
+		animation-delay: 2s;
+		animation-iteration-count: infinite;
+	}
+	@keyframes move {
+		0% {
+			transform: translateX(0%) translateY(0%);
+		}
+		25% {
+			transform: translateX(10%);
+		}
+		50% {
+			transform: translateX(-12%) translateY(11%);
+		}
+		75% {
+			transform: translateX(-12%) translateY(-10%);
+		}
+		100% {
+			transform: translateX(0%) translateY(0%);
+		}
+	}
+}

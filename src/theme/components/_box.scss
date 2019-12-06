@@ -1,37 +1,57 @@
 %box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  object-fit: cover;
-  transition: 1sec;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 1sec;
+	overflow: hidden;
 }
 
 .box3 {
-  @extend %box;
-  height: 15vw;
-  width: 15vw;
-  grid-row: span 3;
-  grid-column: span 3;
-  font-weight: bold;
-  background-color: rgba($color: #efe123, $alpha: 0.5);
+	@extend %box;
+	height: 15vw;
+	width: 15vw;
+	grid-row: span 3;
+	grid-column: span 3;
+	font-weight: bold;
+	background-color: rgba($color: #efe123, $alpha: 0.5);
+	&--mobile {
+		height: 18vh;
+		width: 18vh;
+		grid-row: span 3;
+		grid-column: span 3;
+		font-weight: bold;
+		background-color: rgba($color: #efe123, $alpha: 0.5);
+	}
 }
 
 .box2 {
-  @extend %box;
-  height: 10vw;
-  width: 10vw;
-  grid-row: span 2;
-  grid-column: span 2;
-  background-color: rgba($color: #123666, $alpha: 0.5);
-
+	@extend %box;
+	height: 10vw;
+	width: 10vw;
+	grid-row: span 2;
+	grid-column: span 2;
+	background-color: rgba($color: #123666, $alpha: 0.5);
+	&--mobile {
+		height: 12vh;
+		width: 12vh;
+		grid-row: span 2;
+		grid-column: span 2;
+		background-color: rgba($color: #123666, $alpha: 0.5);
+	}
 }
 
 .box1 {
-  @extend %box;
-  height: 5vw;
-  width: 5vw;
-  grid-row: span 1;
-  grid-column: span 1;
-  background-color: rgba($color: #aaaFFF, $alpha: 0.5);
-
+	@extend %box;
+	height: 5vw;
+	width: 5vw;
+	grid-row: span 1;
+	grid-column: span 1;
+	background-color: rgba($color: #aaafff, $alpha: 0.5);
+	&--mobile {
+		height: 6vh;
+		width: 6vh;
+		grid-row: span 1;
+		grid-column: span 1;
+		background-color: rgba($color: #aaafff, $alpha: 0.5);
+	}
 }

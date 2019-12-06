@@ -64,4 +64,9 @@ function box_maker(row, col, types) {
 	return cords;
 }
 
-export default box_maker;
+function type_count_maker(roleList) {
+	// auto make box type nnumber
+	return roleList;
+}
+
+export { box_maker, type_count_maker };

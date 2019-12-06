@@ -1,13 +1,22 @@
 <template>
-	<div :class="boxType" :style="position">
-		{{role}}
-		<small></small>
+	<div
+		:class="`${boxType}${isMobile?'--mobile':''}`"
+		:style="position"
+	>
+		<imgHolder
+			:imgUrl="role.props.url"
+			:typ="typ"
+			v-if="role.type=='img'"
+		></imgHolder>
 	</div>
 </template>
 
 <script>
 export default {
 	name: 'box',
+	components: {
+		imgHolder: () => import('@/components/roleHolders/imgHold')
+	},
 	props: {
 		boxType: {
 			type: String,
@@ -16,8 +25,11 @@ export default {
 		pos: {
 			type: Array
 		},
-		typ: String,
-		role: String
+		typ: { type: String, required: true },
+		role: {
+			type: Object,
+			required: true
+		}
 	},
 	data() {
 		return {};
