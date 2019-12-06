@@ -1,0 +1,33 @@
+// $mobile: 8/7;
+$mobile: 1000px;
+
+// @mixin mobile(){
+//   @media(min-aspect-ratio: #{mobile}){
+//     @content;
+//   }
+// }
+@mixin mobile() {
+  @media (min-width: #{mobile}){
+    @content;
+  }
+}
+
+@mixin push_auto() {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
