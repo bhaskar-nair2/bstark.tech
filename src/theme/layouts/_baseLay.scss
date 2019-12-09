@@ -1,20 +1,8 @@
 html,
 body {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  background: $backgroundcolor;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-#base {
-  display: grid;
-  grid-template-rows: 90vh 10vh;
-  align-items:center;
-  justify-items: center;
-  @include mobile{
-    grid-template-rows: 95vh 5vh;
-  }
+	background: $backgroundcolor;
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
 }

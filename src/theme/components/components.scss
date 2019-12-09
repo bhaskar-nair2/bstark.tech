@@ -30,3 +30,18 @@
 		}
 	}
 }
+.socialRow {
+	display: flex;
+	width: 20vw;
+	justify-content: space-between;
+	justify-self: end;
+	border-top: 1px solid gainsboro;
+	border-bottom: 1px solid gainsboro;
+	padding: 20px;
+	transition: all 2s ease-in-out;
+	.socialIcon {
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}

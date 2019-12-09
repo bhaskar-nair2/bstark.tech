@@ -1,15 +1,26 @@
 .roleImg {
-	position: relative;
-	animation-name: wavy;
-	animation-duration: 20s;
-	animation-delay: 2s;
-	animation-iteration-count: infinite;
+	overflow: hidden;
+	border-radius: $border-rad;
+	img {
+		position: relative;
+		animation-name: wavy;
+		animation-duration: 20s;
+		animation-delay: 2s;
+		animation-iteration-count: infinite;
+		filter: grayscale(100%);
+		transition: all 1s ease-in-out;
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
 }
+
 .rolePoem {
 	display: flex;
 	align-items: center;
 	height: inherit;
 	width: inherit;
+	background-color: $gray3;
 	p {
 		text-align: start;
 		align-items: center;
@@ -34,8 +45,9 @@
 		align-items: center;
 		justify-content: center;
 		opacity: 100%;
-		color: $link;
+		color: $gray1;
 		border-radius: $border-rad;
+		font-size: 1rem;
 	}
 }
 

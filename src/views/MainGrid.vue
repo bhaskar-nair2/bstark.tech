@@ -6,7 +6,8 @@
 			</a>
 			Math Fuckup. Please Reload.
 		</div>
-		<div class="content" v-else>
+		<div id="mainCont" v-else>
+			<h1>Grayzone</h1>
 			<div :style="gridSize" id="mainGrid">
 				<box
 					:boxType="boxers.type"
@@ -17,6 +18,11 @@
 					:typ="boxers.type"
 					v-for="boxers in boxes"
 				></box>
+			</div>
+			<div class="socialRow">
+				<v-icon class="socialIcon" name="brands/linkedin" scale="2" />
+				<v-icon class="socialIcon" name="brands/instagram" scale="2" />
+				<v-icon class="socialIcon" name="brands/twitter" scale="2" />
 			</div>
 		</div>
 	</div>
@@ -33,7 +39,7 @@ export default {
 	},
 	created() {
 		if (this.isMobile) {
-			this.rows = 14;
+			this.rows = 20;
 			this.cols = 6;
 		}
 	},
@@ -46,17 +52,20 @@ export default {
 			boxes: [],
 			rows: 7,
 			cols: 14,
+			t3: 3,
+			t2: 6,
+			t1: 9,
 			// fetch this from firebase
 			role: [
 				{
 					type: 'img',
-					props: { name: 'disp', url: 'https://picsum.photos/500' }
+					props: { name: 'disp', url: 'https://picsum.photos/id/1005/400' }
 				},
 				{
 					type: 'img',
 					props: {
 						name: 'logo',
-						url: 'https://picsum.photos/300/300?grayscale'
+						url: 'https://picsum.photos/id/1027/500'
 					}
 				},
 				{ type: 'poem', props: {} },
@@ -72,7 +81,7 @@ export default {
 					type: 'img',
 					props: {
 						name: 'loveme',
-						url: 'https://picsum.photos/100?grayscale'
+						url: 'https://picsum.photos/200'
 					}
 				},
 				{ type: 'role', props: {} },
@@ -102,9 +111,9 @@ export default {
 			try {
 				// 7 rows 14 columns type3:3, type2:6 type1:9
 				let boxxs = box_maker(this.rows, this.cols, {
-					t3: 3,
-					t2: 6,
-					t1: 9
+					t3: this.t3,
+					t2: this.t2,
+					t1: this.t1
 				});
 				for (var z = 0; z < boxxs.length; z++) {
 					boxxs[z].role = this.role[z];

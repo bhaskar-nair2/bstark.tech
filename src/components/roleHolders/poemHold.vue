@@ -1,7 +1,7 @@
 <template>
 	<div class="rolePoem">
-		<div class="roleOverlay">More..</div>
-		<p>Ye pal, sapno ki tarah hi to hote hai</p>
+		<div class="roleOverlay">Read..</div>
+		<p>Ye pal, sapno ki tarah hi to hote hai...</p>
 	</div>
 </template>
 

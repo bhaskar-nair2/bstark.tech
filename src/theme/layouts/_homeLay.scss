@@ -1,4 +1,12 @@
+#mainCont {
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	justify-content: space-between;
+	align-items: center;
+}
 #mainGrid {
-  display: grid;
-  gap: 5px;
+	display: grid;
+	gap: 5px;
 }

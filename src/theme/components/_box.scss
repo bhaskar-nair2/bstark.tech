@@ -2,11 +2,17 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-color: $gray3;
 	transition: 1sec;
 	overflow: hidden;
 	border-radius: $border-rad;
-	background-color: $gray3;
 	animation: appear 1s 1 forwards ease-in;
+	transition: all 0.1s ease-in-out;
+	&:hover {
+		box-shadow: 1px 1px 10px black;
+		// transform: scale(1.2);
+		z-index: 99;
+	}
 }
 
 .box3 {
