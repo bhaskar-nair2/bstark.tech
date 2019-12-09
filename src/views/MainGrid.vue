@@ -1,18 +1,23 @@
 <template>
 	<div>
-		<i @click="renderBoxes" class="reBtn" v-if="renderError">
-			<v-icon name="sync-alt" />
-		</i>
-		<div :style="gridSize" id="mainGrid" v-else>
-			<box
-				:boxType="boxers.type"
-				:key="boxers.id"
-				:mobile="isMobile"
-				:pos="boxers.position"
-				:role="boxers.role"
-				:typ="boxers.type"
-				v-for="boxers in boxes"
-			></box>
+		<div class="reloadMsg" v-if="renderError">
+			<a @click="renderBoxes" class="reBtn">
+				<v-icon name="sync-alt" />
+			</a>
+			Math Fuckup. Please Reload.
+		</div>
+		<div class="content" v-else>
+			<div :style="gridSize" id="mainGrid">
+				<box
+					:boxType="boxers.type"
+					:key="boxers.id"
+					:mobile="isMobile"
+					:pos="boxers.position"
+					:role="boxers.role"
+					:typ="boxers.type"
+					v-for="boxers in boxes"
+				></box>
+			</div>
 		</div>
 	</div>
 </template>
@@ -29,7 +34,7 @@ export default {
 	created() {
 		if (this.isMobile) {
 			this.rows = 14;
-			this.cols = 7;
+			this.cols = 6;
 		}
 	},
 	mounted() {
@@ -96,7 +101,6 @@ export default {
 		renderBoxes() {
 			try {
 				// 7 rows 14 columns type3:3, type2:6 type1:9
-
 				let boxxs = box_maker(this.rows, this.cols, {
 					t3: 3,
 					t2: 6,
