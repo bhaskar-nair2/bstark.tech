@@ -19,7 +19,7 @@
 					v-for="boxers in boxes"
 				></box>
 			</div>
-			<div class="socialRow">
+			<div :class="`socialRow${isMobile?'--mobile':''}`">
 				<v-icon class="socialIcon" name="brands/linkedin" scale="2" />
 				<v-icon class="socialIcon" name="brands/instagram" scale="2" />
 				<v-icon class="socialIcon" name="brands/twitter" scale="2" />
