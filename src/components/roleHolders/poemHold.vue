@@ -1,7 +1,7 @@
 <template>
-	<div>
-		<div class="overlay"></div>
-		<img :src="imgUrl" class="roleImg" />
+	<div class="rolePoem">
+		<div class="roleOverlay">More..</div>
+		<p>Ye pal, sapno ki tarah hi to hote hai</p>
 	</div>
 </template>
 
@@ -9,12 +9,11 @@
 import { RoleCompMixin } from '@/components/roleHolders/RoleCompMixin';
 
 export default {
-	name: 'imgHolder',
+	name: 'poemHolder',
 	mixins: [RoleCompMixin],
 	props: {
-		imgUrl: {
-			type: String,
-			required: true
+		text: {
+			type: Object
 		}
 	},
 	computed: {}

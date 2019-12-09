@@ -62,6 +62,7 @@ export default {
 				{ type: 'resume', props: { name: 'canvaRes' } },
 				{ type: 'song', props: {} },
 				{ type: 'comp', props: { name: 'With Love' } },
+				{ type: 'poem', props: {} },
 				{
 					type: 'img',
 					props: {

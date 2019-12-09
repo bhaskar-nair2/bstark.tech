@@ -4,6 +4,8 @@
 	justify-content: center;
 	transition: 1sec;
 	overflow: hidden;
+	background-color: $gray3;
+	border-radius: 15px;
 }
 
 .box3 {
@@ -13,14 +15,13 @@
 	grid-row: span 3;
 	grid-column: span 3;
 	font-weight: bold;
-	background-color: rgba($color: #efe123, $alpha: 0.5);
+	font-size: 2rem;
 	&--mobile {
 		height: 18vh;
 		width: 18vh;
 		grid-row: span 3;
 		grid-column: span 3;
 		font-weight: bold;
-		background-color: rgba($color: #efe123, $alpha: 0.5);
 	}
 }
 
@@ -30,13 +31,12 @@
 	width: 10vw;
 	grid-row: span 2;
 	grid-column: span 2;
-	background-color: rgba($color: #123666, $alpha: 0.5);
+	font-size: 1rem;
 	&--mobile {
 		height: 12vh;
 		width: 12vh;
 		grid-row: span 2;
 		grid-column: span 2;
-		background-color: rgba($color: #123666, $alpha: 0.5);
 	}
 }
 
@@ -46,12 +46,11 @@
 	width: 5vw;
 	grid-row: span 1;
 	grid-column: span 1;
-	background-color: rgba($color: #aaafff, $alpha: 0.5);
+	font-size: 0.8rem;
 	&--mobile {
 		height: 6vh;
 		width: 6vh;
 		grid-row: span 1;
 		grid-column: span 1;
-		background-color: rgba($color: #aaafff, $alpha: 0.5);
 	}
 }

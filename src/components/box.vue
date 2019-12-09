@@ -8,6 +8,8 @@
 			:typ="typ"
 			v-if="role.type=='img'"
 		></imgHolder>
+		<poemHold v-if="role.type=='poem'"></poemHold>
+		<songHold v-if="role.type=='song'"></songHold>
 	</div>
 </template>
 
@@ -15,7 +17,9 @@
 export default {
 	name: 'box',
 	components: {
-		imgHolder: () => import('@/components/roleHolders/imgHold')
+		imgHolder: () => import('@/components/roleHolders/imgHold'),
+		poemHold: () => import('@/components/roleHolders/poemHold'),
+		songHold: ()=> import('@/components/roleHolders/songHold')
 	},
 	props: {
 		boxType: {
