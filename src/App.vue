@@ -6,9 +6,8 @@
 
 <style lang="scss">
 @import "@/theme/main.scss";
-@import url("https://rsms.me/inter/inter-ui.css");
-
-$textFont: "Inter UI";
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat&display=swap');
+$textFont: "Montserrat";	
 
 #app {
 	font-family: $textFont;
