@@ -1,7 +1,8 @@
 <template>
 	<div>
-		<div class="overlay"></div>
-		<img :src="imgUrl" class="roleImg" />
+		<div class="roleImg">
+			<img :src="imgUrl" />
+		</div>
 	</div>
 </template>
 
