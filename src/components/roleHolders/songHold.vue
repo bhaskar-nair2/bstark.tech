@@ -7,7 +7,9 @@
 		</div>
 		<div class="back">
 			<div class="songCard">
-				<span class="songTitle">Lil Wayne - Mona Lisa (Lyrics) ft. Kendrick Lamar</span>
+				<span
+					class="songTitle"
+				>Lil Wayne - Mona Lisa (Lyrics) ft. Kendrick Lamar</span>
 				<span class="caption">Current Fav</span>
 			</div>
 		</div>

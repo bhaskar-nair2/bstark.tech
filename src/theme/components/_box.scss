@@ -4,8 +4,9 @@
 	justify-content: center;
 	transition: 1sec;
 	overflow: hidden;
+	border-radius: $border-rad;
 	background-color: $gray3;
-	border-radius: 15px;
+	animation: appear 1s 1 forwards ease-in;
 }
 
 .box3 {
@@ -15,13 +16,15 @@
 	grid-row: span 3;
 	grid-column: span 3;
 	font-weight: bold;
-	font-size: 2rem;
+	font-size: 2em;
 	&--mobile {
+		@extend %box;
 		height: 18vh;
 		width: 18vh;
 		grid-row: span 3;
 		grid-column: span 3;
 		font-weight: bold;
+		font-size: 2em;
 	}
 }
 
@@ -31,8 +34,10 @@
 	width: 10vw;
 	grid-row: span 2;
 	grid-column: span 2;
-	font-size: 1rem;
+	font-size: 1em;
+	font-size: 25px;
 	&--mobile {
+		@extend %box;
 		height: 12vh;
 		width: 12vh;
 		grid-row: span 2;
@@ -46,11 +51,24 @@
 	width: 5vw;
 	grid-row: span 1;
 	grid-column: span 1;
-	font-size: 0.8rem;
+	font-size: 0.8em;
+	font-size: 12px;
 	&--mobile {
+		@extend %box;
 		height: 6vh;
 		width: 6vh;
 		grid-row: span 1;
 		grid-column: span 1;
+	}
+}
+
+@keyframes appear {
+	from {
+		transform: translate3d(0, 0, 0) rotateY(-90deg);
+		opacity: 0;
+	}
+	to {
+		transformation: translate3d(0, 0, 0) rotateY(0deg);
+		opacity: 1;
 	}
 }
