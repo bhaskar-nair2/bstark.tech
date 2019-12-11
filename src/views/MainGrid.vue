@@ -7,23 +7,15 @@
 			Math Fuckup. Please Reload.
 		</div>
 		<div id="mainCont" v-else>
-			<h1>Grayzone</h1>
+			<h1 class="grayzone">Grayzone</h1>
 			<div :style="gridSize" id="mainGrid">
 				<box
-					:boxType="boxers.type"
-					:key="boxers.id"
-					:mobile="isMobile"
-					:pos="boxers.position"
-					:role="boxers.role"
-					:typ="boxers.type"
-					v-for="boxers in boxes"
+					:boxData="boxData"
+					:key="boxData.id"
+					v-for="boxData in boxes"
 				></box>
 			</div>
-			<div :class="`socialRow${isMobile?'--mobile':''}`">
-				<v-icon class="socialIcon" name="brands/linkedin" scale="2" />
-				<v-icon class="socialIcon" name="brands/instagram" scale="2" />
-				<v-icon class="socialIcon" name="brands/twitter" scale="2" />
-			</div>
+			<social></social>
 		</div>
 	</div>
 </template>
@@ -35,7 +27,8 @@ import { box_maker } from '@/services/boxMaker.js';
 export default {
 	name: 'MainGridView',
 	components: {
-		box
+		box,
+		social: () => import('@/components/socialNav')
 	},
 	created() {
 		if (this.isMobile) {
@@ -59,38 +52,42 @@ export default {
 			role: [
 				{
 					type: 'img',
+					priority: 2,
 					props: { name: 'disp', url: 'https://picsum.photos/id/1005/400' }
 				},
 				{
 					type: 'img',
+					priority: 3,
 					props: {
 						name: 'logo',
 						url: 'https://picsum.photos/id/1027/500'
 					}
 				},
-				{ type: 'poem', props: {} },
-				{ type: 'site', props: { name: 'optimus' } },
-				{ type: 'comp', props: { name: 'His Last Words' } },
-				{ type: 'current_state', props: { name: 'state' } },
-				{ type: 'contact', props: { name: 'Bhaskar' } },
-				{ type: 'resume', props: { name: 'canvaRes' } },
-				{ type: 'song', props: {} },
-				{ type: 'comp', props: { name: 'With Love' } },
-				{ type: 'poem', props: {} },
+				{ type: 'poem', priority: 3, props: {} },
+				{ type: 'site', priority: 1, props: { name: 'optimus' } },
+				{ type: 'comp', priority: 1, props: { name: 'His Last Words' } },
+				{ type: 'current_state', priority: 1, props: { name: 'state' } },
+				{ type: 'contact', priority: 1, props: { name: 'Bhaskar' } },
+				{ type: 'resume', priority: 1, props: { name: 'canvaRes' } },
+				{ type: 'song', priority: 1, props: {} },
+				{ type: 'song', priority: 2, props: {} },
+				{ type: 'comp', priority: 1, props: { name: 'With Love' } },
+				{ type: 'poem', priority: 2, props: {} },
 				{
 					type: 'img',
+					priority: 2,
 					props: {
 						name: 'loveme',
-						url: 'https://picsum.photos/200'
+						url: 'https://picsum.photos/800'
 					}
 				},
-				{ type: 'role', props: {} },
-				{ type: 'song', props: {} },
-				{ type: 'quote', props: {} },
-				{ type: 'quote', props: {} },
-				{ type: 'quote', props: {} },
-				{ type: 'site', props: { name: 'tbw' } },
-				{ type: 'site', props: { name: 'beeSite' } }
+				{ type: 'role', priority: 1, props: {} },
+				{ type: 'song', priority: 2, props: {} },
+				{ type: 'quote', priority: 1, props: {} },
+				{ type: 'quote', priority: 1, props: {} },
+				{ type: 'quote', priority: 1, props: {} },
+				{ type: 'site', priority: 1, props: { name: 'tbw' } },
+				{ type: 'site', priority: 1, props: { name: 'beeSite' } }
 			]
 		};
 	},
@@ -104,6 +101,14 @@ export default {
 					this.isMobile ? '6vh' : '5vw'
 				})`
 			};
+		},
+		priorityRole() {
+			var role = this.role;
+			return role.sort((v1, v2) =>
+				// High number == more important
+				// Easy to add more important items
+				v1.priority < v2.priority ? 1 : -1
+			);
 		}
 	},
 	methods: {
@@ -116,7 +121,8 @@ export default {
 					t1: this.t1
 				});
 				for (var z = 0; z < boxxs.length; z++) {
-					boxxs[z].role = this.role[z];
+					console.log(boxxs[z]);
+					boxxs[z].role = this.priorityRole[z];
 				}
 				this.boxes = boxxs;
 				this.renderError = false;
