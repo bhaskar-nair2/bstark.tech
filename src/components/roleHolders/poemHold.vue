@@ -1,7 +1,7 @@
 <template>
 	<div class="rolePoem">
 		<div class="roleOverlay">Read..</div>
-		<p>Ye pal, sapno ki tarah hi to hote hai...</p>
+		<p>{{textFmt(text)}}</p>
 	</div>
 </template>
 
@@ -9,14 +9,17 @@
 import { RoleCompMixin } from '@/components/roleHolders/RoleCompMixin';
 
 export default {
-	name: 'poemHolder',
+	name: 'poemHolder', // statefull
 	mixins: [RoleCompMixin],
-	props: {
-		text: {
-			type: Object
-		}
+	props: {},
+	data() {
+		return {
+			text: 'Ye pal, sapno ki tarah hi to hote hai'
+		};
 	},
-	computed: {}
+	methods: {
+		
+	}
 };
 </script>
 
