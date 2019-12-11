@@ -2,6 +2,10 @@
 @import './socialNav';
 @import './roleCompStyle';
 
+.grayzone {
+	color: $gray3;
+}
+
 .reloadMsg {
 	display: flex;
 	flex-direction: column;
@@ -39,7 +43,12 @@
 	border-bottom: 1px solid gainsboro;
 	padding: 20px;
 	transition: all 2s ease-in-out;
+	a {
+		color: unset;
+		margin: unset;
+	}
 	.socialIcon {
+		transition: all 0.3s ease-in-out;
 		&:hover {
 			transform: scale(1.2);
 		}
