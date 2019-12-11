@@ -6,12 +6,8 @@
 			/>
 		</div>
 		<div class="back">
-			<div class="songCard">
-				<span
-					class="songTitle"
-				>Lil Wayne - Mona Lisa (Lyrics) ft. Kendrick Lamar</span>
+				<span class="songTitle">{{ textFmt(text) }}</span>
 				<span class="caption">Current Fav</span>
-			</div>
 		</div>
 	</div>
 </template>
@@ -20,7 +16,7 @@
 import { RoleCompMixin } from '@/components/roleHolders/RoleCompMixin';
 
 export default {
-	name: 'imgHolder',
+	name: 'songHold',
 	mixins: [RoleCompMixin],
 	props: {
 		imgUrl: {
@@ -29,6 +25,11 @@ export default {
 		webLink: {
 			type: String
 		}
+	},
+	data() {
+		return {
+			text: 'Mona Lisa - Lil Wayne ft. Kendrick Lamar'
+		};
 	},
 	computed: {}
 };
