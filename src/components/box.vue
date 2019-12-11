@@ -3,13 +3,18 @@
 		:class="`${boxType}${isMobile?'--mobile':''} ${elevated?'elevated':''}`"
 		:style="position"
 	>
-		<imgHolder
-			:imgUrl="role.props.url"
+		<imgHolder :dets="role.props" :typ="typ" v-if="role.type=='img'"></imgHolder>
+		<poemHold
+			:dets="role.props"
 			:typ="typ"
-			v-if="role.type=='img'"
-		></imgHolder>
-		<poemHold :typ="typ" v-if="role.type=='poem'"></poemHold>
-		<songHold :typ="typ" v-if="role.type=='song'"></songHold>
+			v-else-if="role.type=='poem'"
+		></poemHold>
+		<songHold
+			:dets="role.props"
+			:typ="typ"
+			v-else-if="role.type=='song'"
+		></songHold>
+		<div class="noComp" v-else></div>
 	</div>
 </template>
 

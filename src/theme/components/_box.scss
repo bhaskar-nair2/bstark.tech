@@ -2,12 +2,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: $gray3;
-	transition: 1sec;
 	overflow: hidden;
+	transition: 5sec;
 	border-radius: $border-rad;
 	animation: appear 1s 1 forwards ease-in;
-	transition: all 0.1s ease-in-out;
+	transition: box-shadow 0.1s ease-in-out;
 	&:hover {
 		box-shadow: 1px 1px 10px black;
 		// transform: scale(1.2);
@@ -15,7 +14,7 @@
 	}
 }
 .elevated {
-	transition: all 2s ease-in-out;
+	transition: all 12s ease-in-out;
 	box-shadow: 0.5px 0.5px 5px black;
 	z-index: 99;
 }

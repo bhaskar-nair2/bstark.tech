@@ -32,7 +32,7 @@ export default {
 	},
 	created() {
 		if (this.isMobile) {
-			this.rows = 20;
+			this.rows = 18;
 			this.cols = 6;
 		}
 	},
@@ -53,14 +53,17 @@ export default {
 				{
 					type: 'img',
 					priority: 2,
-					props: { name: 'disp', url: 'https://picsum.photos/id/1005/400' }
+					props: {
+						name: 'disp',
+						imgUrl: 'https://picsum.photos/id/1005/400'
+					}
 				},
 				{
 					type: 'img',
 					priority: 3,
 					props: {
 						name: 'logo',
-						url: 'https://picsum.photos/id/1027/500'
+						imgUrl: 'https://picsum.photos/id/1027/500'
 					}
 				},
 				{ type: 'poem', priority: 3, props: {} },
@@ -69,8 +72,24 @@ export default {
 				{ type: 'current_state', priority: 1, props: { name: 'state' } },
 				{ type: 'contact', priority: 1, props: { name: 'Bhaskar' } },
 				{ type: 'resume', priority: 1, props: { name: 'canvaRes' } },
-				{ type: 'song', priority: 1, props: {} },
-				{ type: 'song', priority: 2, props: {} },
+				{
+					type: 'song',
+					priority: 1,
+					props: {
+						title: 'Lil Wayne- Mona Lisa ft. Kendrick Lamar',
+						imgUrl:
+							'http://utopianmagazine.com/wp-content/uploads/2019/05/Kendrick-Lamar-Lil-wayne-mona-lisa-utopianmagazine-1024x1024.jpg'
+					}
+				},
+				{
+					type: 'song',
+					priority: 2,
+					props: {
+						title: 'Eden- Drugs',
+						imgUrl:
+							'https://images.genius.com/99b2b30cf71dc2414519eb5cf0e5062f.1000x1000x1.jpg'
+					}
+				},
 				{ type: 'comp', priority: 1, props: { name: 'With Love' } },
 				{ type: 'poem', priority: 2, props: {} },
 				{
@@ -78,11 +97,19 @@ export default {
 					priority: 2,
 					props: {
 						name: 'loveme',
-						url: 'https://picsum.photos/800'
+						imgUrl: 'https://picsum.photos/800'
 					}
 				},
 				{ type: 'role', priority: 1, props: {} },
-				{ type: 'song', priority: 2, props: {} },
+				{
+					type: 'song',
+					priority: 1,
+					props: {
+						title: 'Lil Wayne- Mona Lisa ft. Kendrick Lamar',
+						imgUrl:
+							'http://utopianmagazine.com/wp-content/uploads/2019/05/Kendrick-Lamar-Lil-wayne-mona-lisa-utopianmagazine-1024x1024.jpg'
+					}
+				},
 				{ type: 'quote', priority: 1, props: {} },
 				{ type: 'quote', priority: 1, props: {} },
 				{ type: 'quote', priority: 1, props: {} },
