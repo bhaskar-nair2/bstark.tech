@@ -1,5 +1,13 @@
 export const RoleCompMixin = {
 	name: 'roleCompMixin',
+	created() {
+		setInterval(this.colorImg, Math.random() * 10000);
+	},
+	data() {
+		return {
+			color: (Math.random() * 73).toFixed(0) % 3 == 0 ? true : false
+		};
+	},
 	props: {
 		typ: {
 			type: String,
@@ -21,6 +29,36 @@ export const RoleCompMixin = {
 					break;
 			}
 			return { width: num, height: num };
+		}
+	},
+	methods: {
+		colorImg() {
+			setTimeout(() => {
+				this.color = !this.color;
+			}, 10000);
+		},
+		textFmt(text) {
+			switch (this.typ) {
+				case 'box1':
+					return (
+						text
+							.split(' ')
+							.slice(0, 3)
+							.join(' ') + '...'
+					);
+				case 'box2':
+					return (
+						text
+							.split(' ')
+							.slice(0, 7)
+							.join(' ') + '...'
+					);
+				case 'box3':
+					return text + '...';
+
+				default:
+					return text;
+			}
 		}
 	}
 };
