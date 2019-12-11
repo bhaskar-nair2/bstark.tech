@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="roleImg">
-			<img :src="imgUrl" />
+			<img :class="color?'color':''" :src="imgUrl" />
 		</div>
 	</div>
 </template>
@@ -12,13 +12,18 @@ import { RoleCompMixin } from '@/components/roleHolders/RoleCompMixin';
 export default {
 	name: 'imgHolder',
 	mixins: [RoleCompMixin],
+
 	props: {
 		imgUrl: {
 			type: String,
 			required: true
 		}
 	},
-	computed: {}
+	data() {
+		return {
+			timeout: []
+		};
+	}
 };
 </script>
 
