@@ -6,8 +6,8 @@
 	border-radius: $border-rad;
 	transition: box-shadow 0.1s ease-in-out;
 	&:hover {
+		animation: unset;
 		box-shadow: 1px 1px 10px black;
-		// transform: scale(1.2);
 		z-index: 99;
 	}
 }
@@ -94,12 +94,12 @@
 
 @keyframes elevate {
 	0% {
-		box-shadow: 0px 0px 0px black;
+		box-shadow: 0px 0px 0px gray;
 	}
 	50% {
-		box-shadow: 2px 2px 20px black;
+		box-shadow: 1px 1px 10px gray;
 	}
 	100% {
-		box-shadow: 0px 0px 0px black;
+		box-shadow: 0px 0px 0px gray;
 	}
 }

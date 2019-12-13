@@ -77,10 +77,6 @@ export default {
 			return this.boxData.role;
 		},
 		timeFunc() {
-			console.log(
-				parseFloat(this.boxData.id.split(':')[1]),
-				parseFloat(this.boxData.id.split(':')[2])
-			);
 			return (
 				5000 +
 				(parseFloat(this.boxData.id.split(':')[1]) +
