@@ -70,7 +70,7 @@ export const RoleCompMixin = {
 					return (
 						text
 							.split(' ')
-							.slice(0, 7)
+							.slice(0, 5)
 							.join(' ') + '...'
 					);
 				case 'box3':

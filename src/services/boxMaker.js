@@ -46,7 +46,7 @@ function box_maker(row, col, types) {
 				if (v_y + ty > !arr_y.length) {
 					if (checker(v_x, v_y, ty)) {
 						cords.push({
-							id: `${ty}${v_x}${v_y}`,
+							id: `${ty}:${v_x}:${v_y}`,
 							type: `box${ty}`,
 							position: [v_x + 1, v_y + 1]
 						});

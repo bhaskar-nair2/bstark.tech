@@ -110,6 +110,18 @@
 	}
 }
 
+.roleCont {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: inherit;
+	width: inherit;
+	background-color: $gray3;
+	.icn {
+		color: $gray2;
+	}
+}
+
 .noComp {
 	background-color: $gray3;
 	height: 100%;
@@ -153,4 +165,3 @@
 		transform: rotateY(0deg);
 	}
 }
-

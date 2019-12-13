@@ -19,20 +19,20 @@
 			:typ="typ"
 			v-else-if="role.type == 'song'"
 		></songHold>
+		<contactRole
+			:dets="role.props"
+			:typ="typ"
+			v-else-if="role.type == 'contact'"
+		></contactRole>
 		<div class="noComp" v-else></div>
 	</div>
 </template>
 
 <script>
-import { setInterval } from 'timers';
-
 export default {
 	name: 'box',
 	created() {
-		setInterval(
-			this.elevate,
-			(100 * parseFloat(this.boxData.id)) / this.boxData.id.length
-		);
+		this.elevate();
 	},
 	mounted() {
 		if (this.isMobile)
@@ -42,7 +42,8 @@ export default {
 	components: {
 		imgHolder: () => import('@/components/roleHolders/imgHold'),
 		poemHold: () => import('@/components/roleHolders/poemHold'),
-		songHold: () => import('@/components/roleHolders/songHold')
+		songHold: () => import('@/components/roleHolders/songHold'),
+		contactRole: () => import('@/components/roleHolders/contactRole')
 	},
 	props: {
 		boxData: {
@@ -74,16 +75,24 @@ export default {
 		},
 		role() {
 			return this.boxData.role;
+		},
+		timeFunc() {
+			return (
+				5000 +
+				parseFloat(this.boxData.id.split(':')[1]) *
+					parseFloat(this.boxData.id.split(':')[2]) *
+					1000
+			);
 		}
 	},
 	methods: {
 		elevate() {
 			if (this.isMobile) {
-				// system buggy
 				this.appear = false;
+				this.elevated = !this.elevated;
 				setTimeout(() => {
-					this.elevated = !this.elevated;
-				}, 5000); // animation duration buffer
+					this.elevate();
+				}, this.timeFunc); // animation duration buffer
 			}
 		}
 	}

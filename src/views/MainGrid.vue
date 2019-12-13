@@ -32,7 +32,7 @@ export default {
 	},
 	created() {
 		if (this.isMobile) {
-			this.rows = 18;
+			this.rows = 16;
 			this.cols = 6;
 		}
 	},
@@ -102,7 +102,6 @@ export default {
 						imgUrl: 'https://picsum.photos/800'
 					}
 				},
-				{ type: 'contact', priority: 1, props: {} },
 				{
 					type: 'song',
 					priority: 1,
