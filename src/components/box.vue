@@ -77,23 +77,26 @@ export default {
 			return this.boxData.role;
 		},
 		timeFunc() {
+			console.log(
+				parseFloat(this.boxData.id.split(':')[1]),
+				parseFloat(this.boxData.id.split(':')[2])
+			);
 			return (
 				5000 +
-				parseFloat(this.boxData.id.split(':')[1]) *
-					parseFloat(this.boxData.id.split(':')[2]) *
-					1000
+				(parseFloat(this.boxData.id.split(':')[1]) +
+					parseFloat(this.boxData.id.split(':')[2])) *
+					100 *
+					parseFloat(this.boxData.id.split(':')[0])
 			);
 		}
 	},
 	methods: {
 		elevate() {
-			if (this.isMobile) {
+			setTimeout(() => {
 				this.appear = false;
 				this.elevated = !this.elevated;
-				setTimeout(() => {
-					this.elevate();
-				}, this.timeFunc); // animation duration buffer
-			}
+				this.elevate();
+			}, this.timeFunc); // animation duration buffer
 		}
 	}
 };
