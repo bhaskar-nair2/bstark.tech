@@ -1,7 +1,7 @@
 <template>
 	<div class="rolePoem">
 		<div class="roleOverlay">Read..</div>
-		<p>{{textFmt(text)}}</p>
+		<p>{{ textFmt(text) }}</p>
 	</div>
 </template>
 
@@ -17,11 +17,8 @@ export default {
 			text: 'Ye pal, sapno ki tarah hi to hote hai'
 		};
 	},
-	methods: {
-		
-	}
+	methods: {}
 };
 </script>
 
-<style>
-</style>
+<style></style>

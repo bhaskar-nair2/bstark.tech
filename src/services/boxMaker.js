@@ -20,6 +20,7 @@ function box_maker(row, col, types) {
 				mat[arr.x + i][arr.y + j] = ty;
 			}
 	}
+
 	function checker(x, y, ty) {
 		let flag = true;
 		for (let i = 0; i < ty; i++) {
@@ -31,6 +32,7 @@ function box_maker(row, col, types) {
 		}
 		return flag;
 	}
+
 	function randomer(ty) {
 		let i = 0;
 		while (i < 50) {

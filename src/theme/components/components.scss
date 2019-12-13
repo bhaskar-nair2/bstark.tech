@@ -1,10 +1,12 @@
 @import './box';
 @import './socialNav';
 @import './roleCompStyle';
+@import './modalCompStyle';
 
 .grayzone {
 	color: $gray3;
 	margin-top: 0;
+	text-decoration: underline;
 }
 
 .reloadMsg {

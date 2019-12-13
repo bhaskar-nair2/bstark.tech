@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div :class="`socialRow${isMobile?'--mobile':''}`">
+		<div :class="`socialRow${isMobile ? '--mobile' : ''}`">
 			<a
 				href="https://www.linkedin.com/in/bhaskar-nair2/"
 				target="blank"
@@ -23,5 +23,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

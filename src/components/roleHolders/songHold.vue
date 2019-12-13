@@ -1,7 +1,7 @@
 <template>
 	<div class="roleSong">
 		<div class="front">
-			<img :class="color?'color':''" :src="dets.imgUrl" />
+			<img :class="color ? 'color' : ''" :src="dets.imgUrl" />
 		</div>
 		<div class="back">
 			<span class="songTitle">{{ textFmt(text) }}</span>
@@ -28,5 +28,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -1,13 +1,23 @@
 <template>
 	<div id="app">
+		<baseModal></baseModal>
 		<router-view />
 	</div>
 </template>
 
+<script>
+export default {
+	name: 'App',
+	components: {
+		baseModal: () => import('@/components/baseModal')
+	}
+};
+</script>
+
 <style lang="scss">
-@import "@/theme/main.scss";
+@import '@/theme/main.scss';
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat&display=swap');
-$textFont: "Montserrat";	
+$textFont: 'Montserrat';
 
 #app {
 	font-family: $textFont;

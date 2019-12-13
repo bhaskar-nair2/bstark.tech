@@ -36,7 +36,7 @@
 .roleOverlay {
 	opacity: 1%;
 	animation: all 5s ease-in-out;
-	position: fixed;
+	position: absolute;
 	width: inherit; /* Full width (cover the whole page) */
 	height: inherit; /* Full height (cover the whole page) */
 	background-color: $overlay;
@@ -153,3 +153,4 @@
 		transform: rotateY(0deg);
 	}
 }
+

@@ -41,6 +41,8 @@ export default {
 	},
 	data() {
 		return {
+			/* TODO: make a function which will see if grid rows/cols are empty 
+			 at the end and decrease the size of the grid */
 			renderError: false,
 			boxes: [],
 			rows: 7,
@@ -100,7 +102,7 @@ export default {
 						imgUrl: 'https://picsum.photos/800'
 					}
 				},
-				{ type: 'role', priority: 1, props: {} },
+				{ type: 'contact', priority: 1, props: {} },
 				{
 					type: 'song',
 					priority: 1,
@@ -161,5 +163,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
