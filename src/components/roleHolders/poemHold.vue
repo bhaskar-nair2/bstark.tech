@@ -1,7 +1,7 @@
 <template>
 	<div class="rolePoem">
 		<div class="roleOverlay">Read..</div>
-		<p>{{ textFmt(text) }}</p>
+		<p>{{ textFmt(dets.title) }}</p>
 	</div>
 </template>
 

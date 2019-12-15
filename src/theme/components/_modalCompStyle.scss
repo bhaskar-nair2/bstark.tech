@@ -18,8 +18,7 @@
 	padding: 20px;
 	box-shadow: 10px 10px 50px black;
 	border-radius: $border-rad;
-	height: 20vh;
-	width: 30vw;
+	height: fit-content;
 	.top {
 		display: flex;
 		width: inherit;

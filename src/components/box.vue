@@ -1,5 +1,5 @@
 <template>
-	<div :class="setClass" @click="showModal" :style="position">
+	<div :class="setClass" :style="position" @click="showModal">
 		<component
 			:dets="role.props"
 			:id="boxData.id"
@@ -39,7 +39,8 @@ export default {
 		return {
 			appear: true,
 			elevated: false,
-			comps: { name: 'imgHolder', typ: 'img' }
+			comps: { name: 'imgHolder', typ: 'img' },
+			modal: false
 		};
 	},
 	computed: {
@@ -76,10 +77,14 @@ export default {
 			return this.boxData.role;
 		},
 		setClass() {
-			var typ = `${this.boxType}${this.isMobile ? '--mobile' : ''}`;
-			var ele = `${this.elevated ? ' elevated' : ''}`;
-			var app = `${this.appear ? ' appear' : ''}`;
-			return typ + ele + app;
+			if (this.modal) {
+				return 'baseModal';
+			} else {
+				var typ = `${this.boxType}${this.isMobile ? '--mobile' : ''}`;
+				var ele = `${this.elevated ? ' elevated' : ''}`;
+				var app = `${this.appear ? ' appear' : ''}`;
+				return typ + ele + app;
+			}
 		},
 		timeFunc() {
 			// controls external styles: elevate
@@ -94,7 +99,8 @@ export default {
 	},
 	methods: {
 		showModal() {
-			this.$root.$emit('showModal',this.boxData);
+			// this.$root.$emit('showModal',this.boxData);
+			this.modal = !this.modal;
 		},
 		elevate() {
 			setTimeout(() => {

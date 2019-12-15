@@ -68,7 +68,14 @@ export default {
 						imgUrl: 'https://picsum.photos/id/1027/500'
 					}
 				},
-				{ type: 'poem', priority: 3, props: {} },
+				{
+					type: 'poem',
+					priority: 3,
+					props: {
+						title: 'Ye Pal',
+						text: 'Ye pal, sapno ki tarah hi to hote hai'
+					}
+				},
 				{ type: 'site', priority: 1, props: { name: 'optimus' } },
 				{ type: 'comp', priority: 1, props: { name: 'His Last Words' } },
 				{ type: 'current_state', priority: 1, props: { name: 'state' } },
@@ -93,7 +100,15 @@ export default {
 					}
 				},
 				{ type: 'comp', priority: 1, props: { name: 'With Love' } },
-				{ type: 'poem', priority: 2, props: {} },
+				{
+					type: 'poem',
+					priority: 2,
+					props: {
+						title: 'December Ki Raat',
+						text:
+							'Ye pal, sapno ki tarah hi to hote hai. Aur hum, in sapno ke liye hi to jeete hai. Ek choti si muskaan aa jati hai, in yado se. Saalo baad bhi Chaar bate ho jati hai, un yaaro se. Ye pal, sapno ki hi tarah to hote hai, Aur hum, in sapno ke liye hi to jeete hai.'
+					}
+				},
 				{
 					type: 'img',
 					priority: 2,
