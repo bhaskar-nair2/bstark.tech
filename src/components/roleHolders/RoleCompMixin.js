@@ -1,9 +1,13 @@
 export const RoleCompMixin = {
 	name: 'roleCompMixin',
 	created() {
-		setInterval(this.colorImg, Math.random() * 10000 * 2);
+		this.colorImg();
 	},
 	props: {
+		id: {
+			type: String,
+			required: true
+		},
 		typ: {
 			type: String,
 			default: 'box1'
@@ -43,19 +47,31 @@ export const RoleCompMixin = {
 
 	computed: {
 		base: function() {
-			return this.typeSize.findOne(type => type.box == this.typ);
+			return this.typeSize.find(type => type.box == this.typ);
 		},
 		size: function() {
 			return this.isMobile
 				? { width: this.base.size, height: this.base.size }
 				: { width: this.base.mobSize, height: this.base.mobSize };
+		},
+		timeFunc() {
+			//controls internal styles: color
+			var [type, col, row] = this.id
+				.split(':')
+				.map(val => parseInt(val));
+			if (this.isMobile) {
+				return row * 100 + col * 10 + type;
+			} else {
+				return row * 10 + col * 100 + type;
+			}
 		}
 	},
 	methods: {
 		colorImg() {
 			setTimeout(() => {
 				this.color = !this.color;
-			}, 10000);
+				this.colorImg();
+			}, 3000 + this.timeFunc);
 		},
 		textFmt(text) {
 			switch (this.typ) {

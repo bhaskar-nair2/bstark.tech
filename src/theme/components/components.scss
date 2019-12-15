@@ -5,8 +5,16 @@
 
 .grayzone {
 	color: $gray3;
-	margin-top: 0;
+	margin: 0 10px 30px 10px;
 	text-decoration: underline;
+}
+
+.version {
+	position: fixed;
+	bottom: 2px;
+	right: 5px;
+	margin: 0 0;
+	color: $gray2;
 }
 
 .reloadMsg {
@@ -47,8 +55,11 @@
 	padding: 20px;
 	transition: all 2s ease-in-out;
 	a {
-		color: unset;
+		color: unset !important;
 		margin: unset;
+		&:any-link {
+			color: unset;
+		}
 	}
 	.socialIcon {
 		transition: all 0.3s ease-in-out;

@@ -149,7 +149,6 @@ export default {
 					t1: this.t1
 				});
 				for (var z = 0; z < boxxs.length; z++) {
-					console.log(boxxs[z]);
 					boxxs[z].role = this.priorityRole[z];
 				}
 				this.boxes = boxxs;

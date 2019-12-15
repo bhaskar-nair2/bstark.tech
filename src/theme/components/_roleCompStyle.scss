@@ -1,9 +1,11 @@
 .roleImg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	overflow: hidden;
 	border-radius: $border-rad;
 	img {
 		position: relative;
-		animation-name: wavy;
 		animation-duration: 20s;
 		animation-delay: 1s;
 		animation-iteration-count: infinite;
@@ -15,6 +17,9 @@
 		&.color {
 			filter: grayscale(0);
 		}
+	}
+	.wavy {
+		animation-name: wavy;
 	}
 }
 
@@ -33,6 +38,7 @@
 		margin: 0 0;
 	}
 }
+
 .roleOverlay {
 	opacity: 1%;
 	animation: all 5s ease-in-out;
@@ -40,7 +46,7 @@
 	width: inherit; /* Full width (cover the whole page) */
 	height: inherit; /* Full height (cover the whole page) */
 	background-color: $overlay;
-	z-index: 999; /* Specify a stack order in case you're using a different order for other elements */
+	z-index: 50; /* Specify a stack order in case you're using a different order for other elements */
 	align-self: center;
 	cursor: pointer; /* Add a pointer on hover */
 	&:hover {

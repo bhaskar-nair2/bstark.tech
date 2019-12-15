@@ -2,6 +2,7 @@
 	<div id="app">
 		<baseModal></baseModal>
 		<router-view />
+		<h5 class="version">v2.0 Grayzone</h5>
 	</div>
 </template>
 
