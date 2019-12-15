@@ -1,6 +1,6 @@
 <template>
 	<div class="roleImg">
-		<img :class="color ? 'color' : ''" :src="dets.imgUrl" />
+		<img :class="color||modal ? 'color' : ''" :src="dets.imgUrl" />
 	</div>
 </template>
 

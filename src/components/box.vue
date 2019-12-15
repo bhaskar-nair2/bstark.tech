@@ -4,6 +4,7 @@
 			:dets="role.props"
 			:id="boxData.id"
 			:is="component.name"
+			:modal='modal'
 			:typ="typ"
 			v-if="component.name!==''"
 		></component>

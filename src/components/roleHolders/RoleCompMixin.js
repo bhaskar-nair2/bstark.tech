@@ -17,6 +17,10 @@ export const RoleCompMixin = {
 			default() {
 				return {};
 			}
+		},
+		modal: {
+			type: Boolean,
+			default: false
 		}
 	},
 	data() {
@@ -64,6 +68,10 @@ export const RoleCompMixin = {
 			} else {
 				return row * 10 + col * 100 + type;
 			}
+		},
+		asModal: function() {
+			if (this.modal) return '--modal';
+			else return '';
 		}
 	},
 	methods: {

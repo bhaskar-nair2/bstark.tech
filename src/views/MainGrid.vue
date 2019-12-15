@@ -73,7 +73,8 @@ export default {
 					priority: 3,
 					props: {
 						title: 'Ye Pal',
-						text: 'Ye pal, sapno ki tarah hi to hote hai'
+						text:
+							'Ye pal, sapno ki tarah hi to hote hai. <br> Aur hum, in sapno ke liye hi to jeete hai. <br> Ek choti si muskaan aa jati hai, in yado se. <br>  Saalo baad bhi Chaar bate ho jati hai, un yaaro se. <br> 	Ye pal, sapno ki hi tarah to hote hai,  <br> 	Aur hum, in sapno ke liye hi to jeete hai.'
 					}
 				},
 				{ type: 'site', priority: 1, props: { name: 'optimus' } },
@@ -105,8 +106,26 @@ export default {
 					priority: 2,
 					props: {
 						title: 'December Ki Raat',
-						text:
-							'Ye pal, sapno ki tarah hi to hote hai. Aur hum, in sapno ke liye hi to jeete hai. Ek choti si muskaan aa jati hai, in yado se. Saalo baad bhi Chaar bate ho jati hai, un yaaro se. Ye pal, sapno ki hi tarah to hote hai, Aur hum, in sapno ke liye hi to jeete hai.'
+						text: `December ki raat, platform pe<br>
+                   Ye thandi hawa, aur mera garam dhoa<br>
+                   Meri aankhe hai vyast, ye cigarette ka kash<br>
+                   Har saas me hai ye, har cheez me hai ye ab<br>
+                   <br>
+                   Ab man nahi hota iska, pyaas lagti hai<br>
+                   Ise chodne ki ab na koi, bhadaas lagti hai.<br>
+                   Ek buzurg aaye, meri aur<br>
+                   Maine sabki tarah, unhe andekha kar diya<br>
+                   Magar wo, Wo aaye mere pass<br>
+                   Aur badi shiddat se pucha<br>
+                   Shakkar hogi aape pass?<br>
+                   <br>
+                   Maine ek aur kash liya, aur unhe dekha<br>
+                   Mujhe nai samaj aaya ye unhone kya bola, 'Shakkar?', maine pucha<br>
+                   'Ha beta, shakkar, diabetics hai hame,<br>
+                   Shakkar khane ka man hai.'<br>
+                   Me hansa, 'baba, diabetes hai,<br>
+                   Shakkar khaoge, mar jaoge!' Is bar, wo hase<br>
+                   'Beta, cigarette kaun phukta hai, jeene ke liye?`
 					}
 				},
 				{

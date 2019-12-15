@@ -1,7 +1,11 @@
 <template>
-	<div class="rolePoem">
-		<div class="roleOverlay">Read..</div>
-		<p>{{ textFmt(dets.title) }}</p>
+	<div :class="`rolePoem${asModal}`">
+		<div class="roleOverlay" v-if="!modal">Read..</div>
+		<p v-if="!modal">{{ textFmt(dets.title) }}</p>
+		<div v-if="modal">
+			<h3>{{dets.title}}</h3>
+			<p v-html="dets.text"></p>
+		</div>
 	</div>
 </template>
 
