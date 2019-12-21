@@ -111,8 +111,6 @@ export default {
 			this.modal = true;
 		},
 		closeModal() {
-			console.log(1);
-
 			this.modal = false;
 		},
 		elevate() {
