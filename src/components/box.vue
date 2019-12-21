@@ -1,13 +1,20 @@
 <template>
-	<div :class="setClass" :style="position" @click="showModal">
+	<div
+		:class="setClass"
+		:style="position"
+		@keypress.esc="closeModal"
+		@click.capture="showModal"
+	>
 		<component
+			@closeModal="closeModal"
 			:dets="role.props"
 			:id="boxData.id"
 			:is="component.name"
-			:modal='modal'
+			:modal="modal"
 			:typ="typ"
-			v-if="component.name!==''"
-		></component>
+			v-if="component.name !== ''"
+		>
+		</component>
 		<div class="noComp" v-else></div>
 	</div>
 </template>
@@ -92,16 +99,21 @@ export default {
 			var id = this.boxData.id.split(':').map(val => parseInt(val));
 			var [type, col, row] = id;
 			if (this.isMobile) {
-				return row * 100 + col * 10 + type * 10;
+				return row * 800 + col * 10 + type * 10;
 			} else {
-				return row * 10 + col * 100 + type * 10;
+				return row * 10 + col * 800 + type * 10;
 			}
 		}
 	},
 	methods: {
 		showModal() {
 			// this.$root.$emit('showModal',this.boxData);
-			this.modal = !this.modal;
+			this.modal = true;
+		},
+		closeModal() {
+			console.log(1);
+
+			this.modal = false;
 		},
 		elevate() {
 			setTimeout(() => {

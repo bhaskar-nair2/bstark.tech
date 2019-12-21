@@ -1,4 +1,9 @@
+%tran {
+	animation: fade 0.8s 1 ease-in-out;
+}
+
 .roleImg {
+	@extend %tran;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -6,9 +11,7 @@
 	border-radius: $border-rad;
 	img {
 		position: relative;
-		animation-duration: 20s;
-		animation-delay: 1s;
-		animation-iteration-count: infinite;
+
 		transition: all 1s ease-in-out;
 		filter: grayscale(100%);
 		&:hover {
@@ -20,10 +23,13 @@
 	}
 	.wavy {
 		animation-name: wavy;
+		animation-duration: 20s;
+		animation-iteration-count: 1;
 	}
 }
 
 .rolePoem {
+	@extend %tran;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -41,6 +47,7 @@
 }
 
 .roleOverlay {
+	@extend %tran;
 	opacity: 1%;
 	animation: all 5s ease-in-out;
 	position: absolute;
@@ -62,6 +69,7 @@
 }
 
 .roleSong {
+	@extend %tran;
 	width: 100%;
 	height: 100%;
 	transition: transform 1s;
@@ -118,6 +126,7 @@
 }
 
 .roleCont {
+	@extend %tran;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -130,45 +139,8 @@
 }
 
 .noComp {
+	@extend %tran;
 	background-color: $gray3;
 	height: 100%;
 	width: 100%;
-}
-
-@keyframes wavy {
-	0% {
-		transform: translateX(0%) translateY(0%);
-	}
-	25% {
-		transform: translateX(10%);
-	}
-	50% {
-		transform: translateX(-12%) translateY(11%);
-	}
-	75% {
-		transform: translateX(-12%) translateY(-10%);
-	}
-	100% {
-		transform: translateX(0%) translateY(0%);
-	}
-}
-
-@keyframes flip {
-	//20 sec
-	40% {
-		// at 8 sec
-		transform: rotateY(0deg);
-	}
-	50% {
-		// at 10 sec
-		transform: rotateY(180deg);
-	}
-	80% {
-		// at 18 sec
-		transform: rotateY(180deg);
-	}
-	90% {
-		// at 20 sec
-		transform: rotateY(0deg);
-	}
 }

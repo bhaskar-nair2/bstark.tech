@@ -9,7 +9,8 @@
 	align-items: center;
 	background: rgba($color: #000000, $alpha: 0.3);
 	z-index: 100;
-	animation: fade 0.4s 1 ease-in-out;
+	animation: fade 0.4s 1 ease-in-out !important;
+
 	.top {
 		display: flex;
 		width: inherit;
@@ -45,17 +46,33 @@
 	background: white;
 	text-align: center;
 	padding: 30px;
-
 	p {
 		font-family: $curFont;
 	}
 }
 
-@keyframes fade {
-	0% {
-		opacity: 0;
+.roleCont--modal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: white;
+	text-align: center;
+	padding: 30px;
+
+	.icn {
+		color: $gray2;
+		margin: 10px 0 40px 0;
 	}
-	100% {
-		opacity: 1;
+	.form {
+		display: flex;
+		flex-direction: column;
 	}
+}
+
+.cross {
+	position: absolute;
+	align-self: flex-end;
+	background: white;
+	border: 1px solid black;
+	border-radius: 15%;
 }

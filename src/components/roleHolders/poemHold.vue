@@ -1,11 +1,14 @@
 <template>
-	<div :class="`rolePoem${asModal}`">
-		<div class="roleOverlay" v-if="!modal">Read..</div>
-		<p v-if="!modal">{{ textFmt(dets.title) }}</p>
-		<div v-if="modal">
-			<h3>{{dets.title}}</h3>
-			<p v-html="dets.text"></p>
-		</div>
+	<div class="rolePoem--modal" v-if="modal">
+		<button class="cross" @click.self="closeModal">
+			Cross
+		</button>
+		<h3>{{ dets.title }}</h3>
+		<p v-html="dets.text"></p>
+	</div>
+	<div v-else class="rolePoem">
+		<div class="roleOverlay">Read..</div>
+		<p>{{ textFmt(dets.title) }}</p>
 	</div>
 </template>
 

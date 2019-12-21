@@ -26,6 +26,7 @@ export const RoleCompMixin = {
 	data() {
 		return {
 			color: (Math.random() * 13).toFixed(0) % 3 == 0 ? true : false, // 1 in 3 chances tobe colored
+			wavy: false,
 			typeSize: [
 				{
 					box: 'box1',
@@ -81,6 +82,7 @@ export const RoleCompMixin = {
 				this.colorImg();
 			}, 3000 + this.timeFunc);
 		},
+
 		textFmt(text) {
 			switch (this.typ) {
 				case 'box1':
@@ -108,6 +110,9 @@ export const RoleCompMixin = {
 				default:
 					return text;
 			}
+		},
+		closeModal() {
+			this.$emit('closeModal');
 		}
 	}
 };

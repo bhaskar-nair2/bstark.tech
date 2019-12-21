@@ -1,5 +1,15 @@
 <template>
-	<div class="roleSong">
+	<div v-if="modal" class="roleSong--modal">
+		<button class="cross" @click.self="closeModal">
+			Cross
+		</button>
+		<img
+			:class="color || modal ? 'color' : ''"
+			:src="dets.imgUrl"
+			style="max-width:600px"
+		/>
+	</div>
+	<div v-else class="roleSong">
 		<div class="front">
 			<img :class="color ? 'color' : ''" :src="dets.imgUrl" />
 		</div>
