@@ -1,16 +1,17 @@
 <template>
-	<div v-if="!modal" class="roleImg">
+	<div class="roleImg--modal" v-if="modal">
+		<button @click.self="closeModal" class="cross">
+			<v-icon @click.passive="closeModal" name="times" scale="2" />
+		</button>
+		<div class="content">
+			<img :src="dets.imgUrl" class="color" style="max-width:600px" />
+		</div>
+	</div>
+	<div class="roleImg" v-else>
 		<img
-			v-if="!modal"
 			:class="{ color: modal || color, wavy: wavy }"
 			:src="dets.imgUrl"
 		/>
-	</div>
-	<div v-else>
-		<button class="cross" @click.self="closeModal">
-			Cross
-		</button>
-		<img class="color" :src="dets.imgUrl" style="max-width:600px" />
 	</div>
 </template>
 

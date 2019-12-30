@@ -30,13 +30,13 @@ export default {
 		box,
 		social: () => import('@/components/socialNav')
 	},
-	created() {
+	created: function() {
 		if (this.isMobile) {
 			this.rows = 16;
 			this.cols = 6;
 		}
 	},
-	mounted() {
+	mounted: async function() {
 		this.renderBoxes();
 	},
 	data() {
@@ -101,10 +101,14 @@ export default {
 						caption: '<3',
 						vidUrl: 'https://www.youtube.com/embed/szIDM99kRNM',
 						imgUrl:
-							'https://images.genius.com/99b2b30cf71dc2414519eb5cf0e5062f.1000x1000x1.jpg'
+							'https://firebasestorage.googleapis.com/v0/b/bstark-tech.appspot.com/o/99b2b30cf71dc2414519eb5cf0e5062f.1000x1000x1.jpg?alt=media&token=df1c60cb-d514-4fd8-be37-9731596cb956'
 					}
 				},
-				{ type: 'comp', priority: 1, props: { name: 'With Love' } },
+				{
+					type: 'comp',
+					priority: 1,
+					props: { title: 'With Love', text: '' }
+				},
 				{
 					type: 'poem',
 					priority: 2,

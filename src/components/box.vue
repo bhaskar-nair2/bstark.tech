@@ -2,21 +2,20 @@
 	<div
 		:class="setClass"
 		:style="position"
-		@keypress.esc="closeModal"
 		@click.capture="showModal"
+		@keypress.esc="closeModal"
 	>
 		<component
-			@closeModal="closeModal"
 			:dets="role.props"
 			:id="boxData.id"
 			:is="component.name"
 			:modal="modal"
 			:typ="typ"
-			v-if="component.name !== ''"
+			@closeModal="closeModal"
 			@keypress.esc="closeModal"
-		>
-		</component>
-		<div class="noComp" @click.capture.stop v-else></div>
+			v-if="component.name !== ''"
+		></component>
+		<div @click.capture.stop class="noComp" v-else></div>
 	</div>
 </template>
 
@@ -109,7 +108,7 @@ export default {
 	methods: {
 		showModal() {
 			// this.$root.$emit('showModal',this.boxData);
-			this.modal = true;
+			if (this.component.name !== '') this.modal = true;
 		},
 		closeModal() {
 			this.modal = false;

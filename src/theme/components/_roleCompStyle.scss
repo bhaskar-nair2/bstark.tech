@@ -1,9 +1,10 @@
-%tran {
+%baseSet {
 	animation: fade 0.8s 1 ease-in-out;
+	cursor: pointer;
 }
 
 .roleImg {
-	@extend %tran;
+	@extend %baseSet;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -28,7 +29,7 @@
 }
 
 .rolePoem {
-	@extend %tran;
+	@extend %baseSet;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -46,7 +47,7 @@
 }
 
 .roleOverlay {
-	@extend %tran;
+	@extend %baseSet;
 	opacity: 1%;
 	animation: all 5s ease-in-out;
 	position: absolute;
@@ -68,7 +69,7 @@
 }
 
 .roleSong {
-	@extend %tran;
+	@extend %baseSet;
 	width: 100%;
 	height: 100%;
 	transition: transform 1s;
@@ -129,7 +130,7 @@
 }
 
 .roleCont {
-	@extend %tran;
+	@extend %baseSet;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -142,7 +143,7 @@
 }
 
 .noComp {
-	@extend %tran;
+	@extend %baseSet;
 	background-color: $gray3;
 	height: 100%;
 	width: 100%;
