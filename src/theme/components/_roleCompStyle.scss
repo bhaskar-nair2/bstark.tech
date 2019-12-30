@@ -11,7 +11,6 @@
 	border-radius: $border-rad;
 	img {
 		position: relative;
-
 		transition: all 1s ease-in-out;
 		filter: grayscale(100%);
 		&:hover {
@@ -78,6 +77,10 @@
 	animation-iteration-count: infinite;
 	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 	animation-duration: 20s;
+	img {
+		height: inherit;
+		object-fit: cover;
+	}
 
 	.front,
 	.back {

@@ -1,21 +1,26 @@
 <template>
-	<div v-if="modal" class="roleSong--modal">
-		<button class="cross" @click.self="closeModal">
-			Cross
+	<div class="roleSong--modal" v-if="modal">
+		<button @click.self="closeModal" class="cross">
+			<v-icon @click.passive="closeModal" name="times" scale="2" />
 		</button>
-		<img
-			:class="color || modal ? 'color' : ''"
-			:src="dets.imgUrl"
-			style="max-width:600px"
-		/>
+		<div class="content">
+			<iframe
+				:src="dets.vidUrl"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+				frameborder="0"
+				height="315"
+				width="560"
+			></iframe>
+		</div>
 	</div>
-	<div v-else class="roleSong">
+	<div class="roleSong" v-else>
 		<div class="front">
 			<img :class="color ? 'color' : ''" :src="dets.imgUrl" />
 		</div>
 		<div class="back">
 			<span class="songTitle">{{ textFmt(text) }}</span>
-			<span class="caption">Current Fav</span>
+			<span class="caption">{{ dets.caption }}</span>
 		</div>
 	</div>
 </template>

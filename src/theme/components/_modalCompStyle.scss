@@ -42,6 +42,10 @@
 		animation: fade 0.4s 1 ease-in-out;
 	}
 }
+
+%content {
+	margin: 20px 10px;
+}
 .rolePoem--modal {
 	background: white;
 	text-align: center;
@@ -53,26 +57,50 @@
 
 .roleCont--modal {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: white;
-	text-align: center;
-	padding: 30px;
-
-	.icn {
-		color: $gray2;
-		margin: 10px 0 40px 0;
+	flex-direction: row-reverse;
+	.content {
+		@extend %content;
+		align-items: center;
+		background: white;
+		text-align: center;
+		padding: 30px;
+		width: 500px;
+		.icn {
+			// letter icon
+			justify-self: center;
+			color: $gray2;
+			margin: 10px 0 40px 0;
+		}
+		form {
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: center;
+			.inputBox {
+				display: flex;
+				margin: 10px;
+				width: 400px;
+				justify-content: space-between;
+				.input{
+					width: 300px;
+				}
+			}
+		}
 	}
-	.form {
-		display: flex;
-		flex-direction: column;
+}
+
+.roleSong--modal {
+	display: flex;
+	flex-direction: row-reverse;
+	.content {
+		@extend %content;
 	}
 }
 
 .cross {
-	position: absolute;
-	align-self: flex-end;
-	background: white;
-	border: 1px solid black;
+	align-self: flex-start;
+	justify-self: right;
+	background: transparent;
+	border: 0;
 	border-radius: 15%;
+	color: $gray1;
 }

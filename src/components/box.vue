@@ -13,9 +13,10 @@
 			:modal="modal"
 			:typ="typ"
 			v-if="component.name !== ''"
+			@keypress.esc="closeModal"
 		>
 		</component>
-		<div class="noComp" v-else></div>
+		<div class="noComp" @click.capture.stop v-else></div>
 	</div>
 </template>
 

@@ -70,7 +70,7 @@ export default {
 				},
 				{
 					type: 'poem',
-					priority: 3,
+					priority: 2,
 					props: {
 						title: 'Ye Pal',
 						text:
@@ -84,11 +84,13 @@ export default {
 				{ type: 'resume', priority: 1, props: { name: 'canvaRes' } },
 				{
 					type: 'song',
-					priority: 1,
+					priority: 3,
 					props: {
-						title: 'Lil Wayne- Mona Lisa ft. Kendrick Lamar',
+						title: 'Post Rock',
+						caption: 'Give it a try',
+						vidUrl: 'https://www.youtube.com/embed/qtGWaQ-arnw',
 						imgUrl:
-							'http://utopianmagazine.com/wp-content/uploads/2019/05/Kendrick-Lamar-Lil-wayne-mona-lisa-utopianmagazine-1024x1024.jpg'
+							'https://s3.amazonaws.com/factmag-images/wp-content/uploads/2016/04/02162215/FACT30BestPostRockAlbums-illustrationJosephGough.jpg'
 					}
 				},
 				{
@@ -96,6 +98,8 @@ export default {
 					priority: 2,
 					props: {
 						title: 'Eden- Drugs',
+						caption: '<3',
+						vidUrl: 'https://www.youtube.com/embed/szIDM99kRNM',
 						imgUrl:
 							'https://images.genius.com/99b2b30cf71dc2414519eb5cf0e5062f.1000x1000x1.jpg'
 					}
@@ -128,6 +132,8 @@ And doom spreads its wares on your life's cracked remains.`
 					priority: 1,
 					props: {
 						title: 'Lil Wayne- Mona Lisa ft. Kendrick Lamar',
+						caption: 'This song..',
+						vidUrl: 'https://www.youtube.com/embed/fhauhH4FR84',
 						imgUrl:
 							'http://utopianmagazine.com/wp-content/uploads/2019/05/Kendrick-Lamar-Lil-wayne-mona-lisa-utopianmagazine-1024x1024.jpg'
 					}
