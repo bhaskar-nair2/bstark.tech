@@ -35,7 +35,8 @@ export default {
 		imgHold: () => import('@/components/roleHolders/imgHold'),
 		poemHold: () => import('@/components/roleHolders/poemHold'),
 		songHold: () => import('@/components/roleHolders/songHold'),
-		contactRole: () => import('@/components/roleHolders/contactRole')
+		storyHold: () => import('@/components/roleHolders/storyHold'),
+		contactHold: () => import('@/components/roleHolders/contactHold')
 	},
 	props: {
 		boxData: {
@@ -61,7 +62,9 @@ export default {
 				case 'song':
 					return { name: 'songHold' };
 				case 'contact':
-					return { name: 'contactRole' };
+					return { name: 'contactHold' };
+				case 'story':
+					return { name: 'storyHold' };
 				default:
 					return { name: '' };
 			}
@@ -107,7 +110,6 @@ export default {
 	},
 	methods: {
 		showModal() {
-			// this.$root.$emit('showModal',this.boxData);
 			if (this.component.name !== '') this.modal = true;
 		},
 		closeModal() {

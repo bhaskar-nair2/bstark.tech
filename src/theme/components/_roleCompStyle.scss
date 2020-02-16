@@ -11,6 +11,8 @@
 	overflow: hidden;
 	border-radius: $border-rad;
 	img {
+		max-width: 100%;
+		max-height: 100%;
 		position: relative;
 		transition: all 1s ease-in-out;
 		filter: grayscale(100%);
@@ -29,6 +31,24 @@
 }
 
 .rolePoem {
+	@extend %baseSet;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: inherit;
+	width: inherit;
+	background-color: $gray3;
+	p {
+		text-align: center;
+		align-items: center;
+		font-family: $curFont;
+		color: $silver1;
+		padding: 3px 10px;
+		margin: 0 0;
+	}
+}
+
+.roleStory {
 	@extend %baseSet;
 	display: flex;
 	align-items: center;

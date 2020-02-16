@@ -1,11 +1,15 @@
 <template>
 	<div class="rolePoem--modal" v-if="modal">
-		<button @click.self="closeModal" class="cross">
-			<v-icon @click.passive="closeModal" name="times" scale="2" />
-		</button>
+		<div class="crossHold">
+			<button @click.self="closeModal" class="cross">
+				<v-icon @click.passive="closeModal" name="times" scale="2" />
+			</button>
+		</div>
 		<div class="content">
-			<h3>{{ dets.title }}</h3>
-			<p v-html="dets.text"></p>
+			<div class="page">
+				<h3>{{ dets.title }}</h3>
+				<p v-html="dets.text"></p>
+			</div>
 		</div>
 	</div>
 	<div class="rolePoem" v-else>
@@ -18,13 +22,11 @@
 import { RoleCompMixin } from '@/components/roleHolders/RoleCompMixin';
 
 export default {
-	name: 'poemHolder', // statefull
+	name: 'poemHolder', // stateless
 	mixins: [RoleCompMixin],
 	props: {},
 	data() {
-		return {
-			text: 'Ye pal, sapno ki tarah hi to hote hai'
-		};
+		return {};
 	},
 	methods: {}
 };

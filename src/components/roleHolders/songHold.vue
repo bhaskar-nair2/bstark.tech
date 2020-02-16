@@ -1,8 +1,10 @@
 <template>
 	<div class="roleSong--modal" v-if="modal">
-		<button @click.self="closeModal" class="cross">
-			<v-icon @click.passive="closeModal" name="times" scale="2" />
-		</button>
+		<div class="crossHold">
+			<button @click.self="closeModal" class="cross">
+				<v-icon @click.passive="closeModal" name="times" scale="2" />
+			</button>
+		</div>
 		<div class="content">
 			<iframe
 				:src="dets.vidUrl"

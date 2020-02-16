@@ -2,11 +2,11 @@
 	<div>
 		<div :class="`socialRow${isMobile ? '--mobile' : ''}`">
 			<a
-				href="https://www.linkedin.com/in/bhaskar-nair2/"
+				href="https://dribbble.com/bhaskar_nair2"
 				style="color:unset"
 				target="blank"
 			>
-				<v-icon class="socialIcon" name="brands/linkedin" scale="2" />
+				<v-icon class="socialIcon" name="brands/dribbble" scale="2" />
 			</a>
 			<a
 				href="https://www.instagram.com/bas_kar_na_yar"
@@ -16,11 +16,11 @@
 				<v-icon class="socialIcon" name="brands/instagram" scale="2" />
 			</a>
 			<a
-				href="https://twitter.com/bas_kar_na_yar"
+				href="https://www.linkedin.com/in/bhaskar-nair2/"
 				style="color:unset"
 				target="blank"
 			>
-				<v-icon class="socialIcon" name="brands/twitter" scale="2" />
+				<v-icon class="socialIcon" name="brands/linkedin-in" scale="2" />
 			</a>
 		</div>
 	</div>

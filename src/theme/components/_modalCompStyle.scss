@@ -34,12 +34,14 @@
 }
 
 %content {
-	margin: 20px 10px;
+	display: flex;
+	border-radius: $border-rad;
+	flex-direction: row;
 }
 
 %baseModalSet {
 	display: flex;
-	flex-direction: row-reverse;
+	flex-direction: column;
 }
 
 .roleImg--modal {
@@ -56,8 +58,34 @@
 		background: white;
 		padding: 30px;
 	}
-	p {
-		font-family: $curFont;
+	.page {
+		background: white;
+		padding: 30px;
+		p {
+			font-family: $curFont;
+			letter-spacing: 1.4px;
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.roleStory--modal {
+	@extend %baseModalSet;
+	width: 50vw;
+	.content {
+		@extend %content;
+	}
+	.pageNo {
+		float: right;
+	}
+	.page {
+		background: white;
+		padding: 30px;
+		p {
+			font-family: $curFont;
+			letter-spacing: 1.4px;
+			font-size: 1.2rem;
+		}
 	}
 }
 
@@ -100,15 +128,32 @@
 	}
 }
 
-.cross {
-	align-self: flex-start;
-	justify-self: right;
-	background: transparent;
-	border: 0;
-	border-radius: 15%;
-	color: $gray1;
-	cursor: pointer;
-	&:focus {
-		outline: 0;
+.crossHold {
+	display: flex;
+	justify-content: flex-end;
+	.cross {
+		background: transparent;
+		border: 0;
+		color: $gray1;
+		cursor: pointer;
+		&:focus {
+			outline: 0;
+		}
+	}
+}
+
+.arrowHold {
+	display: flex;
+	.arrow {
+		background: transparent;
+		border: 0;
+		color: $gray6;
+		cursor: pointer;
+		&:disabled {
+			opacity: 20%;
+		}
+		&:focus {
+			outline: 0;
+		}
 	}
 }

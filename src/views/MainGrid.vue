@@ -57,7 +57,8 @@ export default {
 					priority: 2,
 					props: {
 						name: 'disp',
-						imgUrl: 'https://picsum.photos/id/1005/400'
+						imgUrl:
+							'https://firebasestorage.googleapis.com/v0/b/bstark-tech.appspot.com/o/IMG_20181208_194704_037.jpg?alt=media&token=90b4e5cf-f1d8-41d9-a80c-d41ce6961624'
 					}
 				},
 				{
@@ -78,7 +79,73 @@ export default {
 					}
 				},
 				{ type: 'site', priority: 1, props: { name: 'optimus' } },
-				{ type: 'comp', priority: 1, props: { name: 'His Last Words' } },
+				{
+					type: 'story',
+					priority: 1,
+					props: {
+						title: 'His Last Words',
+						pages: [
+							{
+								title: '',
+								text: `Hey buddy, It's been a long time since we last spoke. 
+						Life, you know how it is, all these responsibilities all the work, 
+						none of us really has the time for each other. I loved the way we 
+						used to be in school, we were there everyone was and we used to 
+						enjoy so much all those walks after class, taking each other's 
+						case, teasing our romeo with his new girlfriend's name and going 
+						around trying to do new things which mostly resulted us standing in 
+						front of our house master, I so wanna go back to them. But now, it's 
+						gone just disappeared, it's like a void which no one can ever fill. 
+						There are people, people whom I live with, people whom I am friends 
+						with but people I barely know, I barely understand. They scare me, this 
+						whole thing scares me, I don't know who to talk to, I don't know who to 
+						trust here, I don't know who to rely on. Because every time I do, I end 
+						up hurt, I end up humiliated, I end up alone. I don't even know what I 
+						want anymore, I don't even know why am I here. I feel as if I am lost or 
+						at least the purpose I was living for is. This is not what I wanted, I 
+						wanted to be free, not chained up like this, chained up by all these
+						watching eyes with those knives, bloody from the backs they have stabbed.
+						These eyes, they scare me, I never used to care about what people think 
+						of me back then but back then, it was different, because I had you, 
+						i had my people, the ones that were there, that were my friends and that's
+						when I knew that I could conquer the world with you because your eyes 
+						never chained me your knives were blunt in for me, but now here I stand,
+						alone, that void, ever so deep, grows bigger, that distrust, ever so 
+						powerful, becoming unfathomable. Hey, I am scared today, but it's the 
+						last time because I know, you can't come back to me.`
+							},
+							{
+								title: '',
+								text: `Hey buddy, It's been a long time since we last spoke. 
+						Life, you know how it is, all these responsibilities all the work, 
+						none of us really has the time for each other. I loved the way we 
+						used to be in school, we were there everyone was and we used to 
+						enjoy so much all those walks after class, taking each other's 
+						case, teasing our romeo with his new girlfriend's name and going 
+						around trying to do new things which mostly resulted us standing in 
+						front of our house master, I so wanna go back to them. But now, it's 
+						gone just disappeared, it's like a void which no one can ever fill. 
+						There are people, people whom I live with, people whom I am friends 
+						with but people I barely know, I barely understand. They scare me, this 
+						whole thing scares me, I don't know who to talk to, I don't know who to 
+						trust here, I don't know who to rely on. Because every time I do, I end 
+						up hurt, I end up humiliated, I end up alone. I don't even know what I 
+						want anymore, I don't even know why am I here. I feel as if I am lost or 
+						at least the purpose I was living for is. This is not what I wanted, I 
+						wanted to be free, not chained up like this, chained up by all these
+						watching eyes with those knives, bloody from the backs they have stabbed.
+						These eyes, they scare me, I never used to care about what people think 
+						of me back then but back then, it was different, because I had you, 
+						i had my people, the ones that were there, that were my friends and that's
+						when I knew that I could conquer the world with you because your eyes 
+						never chained me your knives were blunt in for me, but now here I stand,
+						alone, that void, ever so deep, grows bigger, that distrust, ever so 
+						powerful, becoming unfathomable. Hey, I am scared today, but it's the 
+						last time because I know, you can't come back to me.`
+							}
+						]
+					}
+				},
 				{ type: 'current_state', priority: 1, props: { name: 'state' } },
 				{ type: 'contact', priority: 1, props: { name: 'Bhaskar' } },
 				{ type: 'resume', priority: 1, props: { name: 'canvaRes' } },
@@ -103,11 +170,6 @@ export default {
 						imgUrl:
 							'https://firebasestorage.googleapis.com/v0/b/bstark-tech.appspot.com/o/99b2b30cf71dc2414519eb5cf0e5062f.1000x1000x1.jpg?alt=media&token=df1c60cb-d514-4fd8-be37-9731596cb956'
 					}
-				},
-				{
-					type: 'comp',
-					priority: 1,
-					props: { title: 'With Love', text: '' }
 				},
 				{
 					type: 'poem',

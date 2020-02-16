@@ -10,7 +10,7 @@
 					<v-icon @click="hide" name="times" scale="1" />
 				</div>
 			</div>
-			<div class="content">{{boxData}}</div>
+			<div class="content">{{ boxData }}</div>
 		</div>
 	</div>
 </template>
