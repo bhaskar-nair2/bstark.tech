@@ -1,5 +1,5 @@
 <template>
-	<t-modal class="roleImg--modal" ref="modal" v-if="modal">
+	<div class="roleImg--modal" ref="modal" v-if="modal">
 		<div class="crossHold">
 			<button @click.self="closeModal" class="cross">
 				<v-icon @click.passive="closeModal" name="times" scale="2" />
@@ -8,7 +8,7 @@
 		<div class="content">
 			<img :src="dets.imgUrl" class="color" style="max-width:600px" />
 		</div>
-	</t-modal>
+	</div>
 	<div class="roleImg" v-else>
 		<img
 			:class="{ color: modal || color, wavy: wavy }"
