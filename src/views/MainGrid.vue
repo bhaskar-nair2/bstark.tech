@@ -8,7 +8,11 @@
 		</div>
 		<div id="mainCont" v-else>
 			<h1 class="grayzone">Grayzone</h1>
-			<div :style="gridSize" id="mainGrid">
+			<div
+				:class="`mainGrid${this.isMobile ? '--mobile' : ''}`"
+				:style="gridSize"
+				id="mainGrid"
+			>
 				<box
 					:boxData="boxData"
 					:key="boxData.id"
@@ -177,12 +181,12 @@ export default {
 					props: {
 						title: 'Smoke in my Veins',
 						text: `Watch it dance-the world's heaving turning,<br>
-Instants pass and answer all life's yearning,<br>
-Count it up-the sands flying through the glass.<br>
-Slurp life down, let its pickle end your fast.<br>
-Chemicals courses and satisfaction slowly fades...<br>
-Flesh enlists in ecstasy as bliss plough your veins,<br>
-And doom spreads its wares on your life's cracked remains.`
+									Instants pass and answer all life's yearning,<br>
+									Count it up-the sands flying through the glass.<br>
+									Slurp life down, let its pickle end your fast.<br>
+									Chemicals courses and satisfaction slowly fades...<br>
+									Flesh enlists in ecstasy as bliss plough your veins,<br>
+									And doom spreads its wares on your life's cracked remains.`
 					}
 				},
 				{

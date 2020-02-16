@@ -64,12 +64,12 @@
 
 @keyframes elevate {
 	0% {
-		box-shadow: 1px 1px 2px  grey, -1px -1px 2px lightgray;
+		box-shadow: 3px 3px 4px $shadowBlack, -3px -3px 4px $shadowWhite;
 	}
 	50% {
-		box-shadow: 1px 1px 5px  grey, -1px -1px 5px lightgray;
+		box-shadow: 3px 3px 8px $shadowBlack, -3px -3px 8px $shadowWhite;
 	}
 	100% {
-		box-shadow: 1px 1px 2px  grey, -1px -1px 2px lightgray;
+		box-shadow: 3px 3px 4px $shadowBlack, -3px -3px 4px $shadowWhite;
 	}
 }

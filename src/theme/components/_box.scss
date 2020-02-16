@@ -1,14 +1,15 @@
 %box {
+	background-color: $backgroundcolor !important;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
 	border-radius: $border-rad;
 	transition: box-shadow 0.1s ease-in-out;
-	box-shadow: 1px 1px 2px  grey, -1px -1px 2px lightgray ;
+	box-shadow: 3px 3px 4px $shadowBlack, -3px -3px 4px $shadowWhite;
 	&:hover {
 		animation: unset;
-		box-shadow: 1px 1px 3px black, -1px -1px 3px lightgray ;
+		box-shadow: 3px 3px 8px $shadowBlack, -3px -3px 8px $shadowWhite;
 		z-index: 99;
 	}
 }
@@ -25,8 +26,8 @@
 
 .box3 {
 	@extend %box;
-	height: 15vw;
-	width: 15vw;
+	height: 16vw;
+	width: 16vw;
 	grid-row: span 3;
 	grid-column: span 3;
 	font-weight: bold;
@@ -34,8 +35,8 @@
 	font-size: 30px;
 	&--mobile {
 		@extend %box;
-		height: 18vh;
-		width: 18vh;
+		height: 20vh;
+		width: 20vh;
 		grid-row: span 3;
 		grid-column: span 3;
 		font-weight: bold;
@@ -46,16 +47,16 @@
 
 .box2 {
 	@extend %box;
-	height: 10vw;
-	width: 10vw;
+	height: 10.5vw;
+	width: 10.5vw;
 	grid-row: span 2;
 	grid-column: span 2;
 	font-size: 1em;
 	font-size: 25px;
 	&--mobile {
 		@extend %box;
-		height: 12vh;
-		width: 12vh;
+		height: 13vh;
+		width: 13vh;
 		grid-row: span 2;
 		grid-column: span 2;
 		font-size: 1em;
@@ -81,4 +82,3 @@
 		font-size: 11px;
 	}
 }
-

@@ -2,17 +2,27 @@ $white: #ffffff;
 $silver1: #202020;
 $gray1: #d6d6d6;
 $gray2: #8b8b8bcc;
-$gray3: #cecccc;
+$gray3: #e7e8ea;
 $gray4: #cecccc;
 $gray5: #cecccc;
 $gray6: #cecccc;
 $black: #353535;
 
-$backgroundcolor: linear-gradient(0.25turn, $white, $gray1);
+$backgroundcolor: $gray3;
+$shadowBlack: rgba(
+	$color: #000000,
+	$alpha: 0.25
+);
+
+$shadowWhite: rgba(
+	$color: #ffffff,
+	$alpha: 0.7
+);
+
 $boxcolor: $gray2;
 $textcolor: $black;
 $linecolor: $black;
 
 $link: #35b7f3;
 $overlay: rgba(0, 0, 0, 0.8);
-$poem: rgba(0,0,0,1)
+$poem: rgba(0, 0, 0, 1);
