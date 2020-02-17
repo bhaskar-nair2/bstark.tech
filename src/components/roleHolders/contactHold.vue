@@ -43,6 +43,11 @@ export default {
 		return {
 			timeout: []
 		};
+	},
+	methods: {
+		sendMail() {
+			this.firebase;
+		}
 	}
 };
 </script>
