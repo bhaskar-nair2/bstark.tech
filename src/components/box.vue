@@ -9,10 +9,10 @@
 			:dets="role.props"
 			:id="boxData.id"
 			:is="component.name"
-			:modal="modal"
 			:typ="typ"
 			@closeModal="closeModal"
 			@keypress.esc="closeModal"
+			ref="boxComp"
 			v-if="component.name !== ''"
 		></component>
 		<div @click.capture.stop class="noComp" v-else></div>
@@ -110,7 +110,10 @@ export default {
 	},
 	methods: {
 		showModal() {
-			if (this.component.name !== '') this.modal = true;
+			if (this.component.name !== '') {
+				this.modal = true;
+				this.$refs.boxComp.showModal();
+			}
 		},
 		closeModal() {
 			this.modal = false;

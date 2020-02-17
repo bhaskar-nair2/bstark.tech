@@ -17,8 +17,9 @@
 				</button>
 			</div>
 			<div class="page">
-				<h3>{{ dets.title }}</h3>
+				<h3 v-if="curPage == 0">{{ dets.title }}</h3>
 				<img :src="dets.imgUrl" class="color" />
+				<h5 v-html="dets.pages[curPage].title"></h5>
 				<p v-html="dets.pages[curPage].text"></p>
 				<span class="pageNo">{{ curPage + 1 }}/{{ totPages }}</span>
 			</div>
@@ -68,7 +69,17 @@ export default {
 	methods: {
 		chgPage(dir) {
 			this.curPage += dir;
+		},
+		closeModal() {
+			this.modal = false;
+			this.$emit('closeModal');
+			this.curPage = 0;
 		}
+		// showModal() {
+		// 	this.modal = false;
+		// 	this.closeModal();
+		// 	this.$router.push({ name: 'blog', params: { id: 1 } });
+		// }
 	}
 };
 </script>

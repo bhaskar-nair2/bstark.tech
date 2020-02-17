@@ -69,7 +69,10 @@
 	.page {
 		background: white;
 		padding: 30px;
-
+		width: 60vw;
+		max-width: 600px;
+		max-height: 60vh;
+		overflow-y: scroll;
 		p {
 			font-family: $curFont;
 			letter-spacing: 1.4px;
@@ -82,14 +85,17 @@
 	@extend %baseModalSet;
 	.content {
 		@extend %content;
-		max-height: 80vh;
 	}
 	.pageNo {
 		float: right;
 	}
 	.page {
+		max-height: 80vh;
 		background: white;
 		padding: 30px;
+		width: 70vw;
+		max-width: 1000px;
+		overflow-y: scroll;
 		p {
 			font-family: $curFont;
 			letter-spacing: 1.4px;
