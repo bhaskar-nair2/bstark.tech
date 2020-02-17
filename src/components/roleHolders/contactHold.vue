@@ -1,16 +1,14 @@
 <template>
 	<div class="roleCont--modal" v-if="modal">
-		<button @click.self="closeModal" class="cross">
-			<v-icon
-				@click.passive="closeModal"
-				name="times"
-				scale="2"
-			></v-icon>
-		</button>
+		<div class="crossHold">
+			<button @click.self="closeModal" class="cross">
+				<v-icon @click.passive="closeModal" name="times" scale="2" />
+			</button>
+		</div>
 		<div class="content">
-			<div>
+			<p class="formIcon">
 				<v-icon class="icn" name="paper-plane" scale="3"></v-icon>
-			</div>
+			</p>
 			<form @submit.prevent="sendMail">
 				<div class="inputBox">
 					<label for="name">Name</label>

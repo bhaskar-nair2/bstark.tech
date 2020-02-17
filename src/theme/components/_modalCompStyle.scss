@@ -46,8 +46,16 @@
 
 .roleImg--modal {
 	@extend %baseModalSet;
+	align-items: center;
+	.crossHold {
+		align-self: flex-end;
+	}
 	.content {
 		@extend %content;
+		.modalImg {
+			width: 90vw;
+			max-width: 600px;
+		}
 	}
 }
 
@@ -61,6 +69,7 @@
 	.page {
 		background: white;
 		padding: 30px;
+
 		p {
 			font-family: $curFont;
 			letter-spacing: 1.4px;
@@ -71,9 +80,9 @@
 
 .roleStory--modal {
 	@extend %baseModalSet;
-	width: 50vw;
 	.content {
 		@extend %content;
+		max-height: 80vh;
 	}
 	.pageNo {
 		float: right;
@@ -93,17 +102,19 @@
 	@extend %baseModalSet;
 	.content {
 		@extend %content;
+		flex-flow: column;
 		align-items: center;
 		background: white;
 		text-align: center;
 		padding: 30px;
 		width: 500px;
-		.icn {
-			// letter icon
-			justify-self: center;
-			color: $gray2;
-			margin: 10px 0 40px 0;
+		.formIcon {
+			.icn {
+				justify-self: center;
+				color: $gray2;
+			}
 		}
+
 		form {
 			display: inline-flex;
 			flex-direction: column;

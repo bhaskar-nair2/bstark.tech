@@ -6,9 +6,10 @@
 			</button>
 		</div>
 		<div class="content">
-			<img :src="dets.imgUrl" class="color" style="max-width:600px" />
+			<img :src="dets.imgUrl" class="color modalImg" />
 		</div>
 	</div>
+
 	<div class="roleImg" v-else>
 		<img
 			:class="{ color: modal || color, wavy: wavy }"
