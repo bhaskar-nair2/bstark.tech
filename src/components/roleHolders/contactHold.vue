@@ -12,15 +12,33 @@
 			<form @submit.prevent="sendMail">
 				<div class="inputBox">
 					<label for="name">Name</label>
-					<input class="input" id="name" required type="name" />
+					<input
+						class="input"
+						id="name"
+						required
+						type="name"
+						v-model="formData.name"
+					/>
 				</div>
 				<div class="inputBox">
 					<label for="mail">Mail Id</label>
-					<input class="input" id="mail" required type="email" />
+					<input
+						class="input"
+						id="mail"
+						required
+						type="email"
+						v-model="formData.email"
+					/>
 				</div>
 				<div class="inputBox">
 					<label for="msg">Message</label>
-					<textarea class="input" cols="20" id="msg" rows="6" />
+					<textarea
+						class="input"
+						cols="20"
+						id="msg"
+						rows="6"
+						v-model="formData.message"
+					/>
 				</div>
 				<div class="sub">
 					<button type="submit">Send</button>
@@ -35,18 +53,20 @@
 
 <script>
 import { RoleCompMixin } from '@/components/roleHolders/RoleCompMixin';
+import { msgCollection } from '../../firebaseConfig';
 
 export default {
 	name: 'imgHolder',
 	mixins: [RoleCompMixin],
 	data() {
 		return {
-			timeout: []
+			timeout: [],
+			formData: {}
 		};
 	},
 	methods: {
 		sendMail() {
-			this.firebase;
+			msgCollection.add(this.formData);
 		}
 	}
 };

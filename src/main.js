@@ -8,6 +8,8 @@ import { DevicePlugin } from '@/plugins/device.js';
 import 'vue-awesome/icons';
 import Icon from 'vue-awesome/components/Icon';
 
+const fb = require('./firebaseConfig.js');
+
 Vue.component('v-icon', Icon);
 Vue.use(DevicePlugin);
 
