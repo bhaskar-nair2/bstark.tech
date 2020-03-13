@@ -1,9 +1,11 @@
 <template>
-	<div>
-		<router-link :to="{ name: dets.route }">
-			<h1 class="routeHold">{{ dets.text }}</h1>
-		</router-link>
-	</div>
+	<router-link
+		:to="{ name: dets.route }"
+		class="routeHold"
+		style="width:100%;height:100%"
+	>
+		<h1>{{ dets.text }}</h1>
+	</router-link>
 </template>
 
 <script>

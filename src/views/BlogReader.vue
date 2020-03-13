@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<!-- Nav -->
+		<globalNav></globalNav>
+		<blogCards></blogCards>
 		<!-- Title -->
 		<!-- Subtitle-1 -->
 		<!-- Content-1 -->
@@ -8,15 +9,17 @@
       ...
       ...
       ...
-      -->
+		-->
 		<!-- Other Posts -->
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'BlogReader'
+	name: 'BlogReader',
+	components: {
+		globalNav: () => import('@/components/blogComps/globalNav'),
+		blogCards: () => import('@/components/blogComps/blogCards')
+	}
 };
 </script>
-
-<style></style>

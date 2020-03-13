@@ -1,0 +1,32 @@
+.navBar {
+  margin: 3vh 10vh;
+	.navList {
+		a {
+      color: unset;
+      margin: 0 1vh;
+		}
+	}
+}
+
+.cardHolder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blogCard {
+	background-color: $backgroundcolor !important;
+	text-align: start;
+	justify-content: start;
+	overflow: hidden;
+  padding: 0 10px;
+  margin: 2vh 2vh;
+	border-radius: $border-rad;
+	transition: box-shadow 0.1s ease-in-out;
+	box-shadow: 3px 3px 4px $shadowBlack, -3px -3px 4px $shadowWhite;
+	&:hover {
+		animation: unset;
+		box-shadow: 3px 3px 8px $shadowBlack, -3px -3px 8px $shadowWhite;
+		z-index: 99;
+	}
+}
