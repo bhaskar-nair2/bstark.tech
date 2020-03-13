@@ -11,8 +11,8 @@ const routes = [
 			import(/* webpackChunkName: "main" */ '@/views/MainGrid.vue')
 	},
 	{
-		path: '/blog/:id',
-		name: 'blog',
+		path: '/blog/:id?',
+		name: 'blogReader',
 		component: () =>
 			import(/* webpackChunkName: "blog" */ '@/views/BlogReader.vue')
 	},

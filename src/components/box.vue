@@ -36,7 +36,8 @@ export default {
 		poemHold: () => import('@/components/roleHolders/poemHold'),
 		songHold: () => import('@/components/roleHolders/songHold'),
 		storyHold: () => import('@/components/roleHolders/storyHold'),
-		contactHold: () => import('@/components/roleHolders/contactHold')
+		contactHold: () => import('@/components/roleHolders/contactHold'),
+		routeHold: () => import('@/components/roleHolders/routeHold')
 	},
 	props: {
 		boxData: {
@@ -65,6 +66,8 @@ export default {
 					return { name: 'contactHold' };
 				case 'story':
 					return { name: 'storyHold' };
+				case 'route':
+					return { name: 'routeHold' };
 				default:
 					return { name: '' };
 			}
@@ -110,7 +113,7 @@ export default {
 	},
 	methods: {
 		showModal() {
-			if (this.component.name !== '') {
+			if (this.component.name !== '' || this.component.name == 'route') {
 				this.modal = true;
 				this.$refs.boxComp.showModal();
 			}
