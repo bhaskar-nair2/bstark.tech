@@ -128,7 +128,7 @@ const role = [
 		}
 	},
 	{
-		type: 'route',
+		type: 'route-dis',
 		priority: 1,
 		props: {
 			text: 'Blog',
