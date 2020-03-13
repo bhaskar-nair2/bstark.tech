@@ -43,6 +43,7 @@
 				<div class="sub">
 					<button type="submit">Send</button>
 				</div>
+				<p v-if="sending">{{ message }}</p>
 			</form>
 		</div>
 	</div>
@@ -56,17 +57,30 @@ import { RoleCompMixin } from '@/components/roleHolders/RoleCompMixin';
 import { msgCollection } from '../../firebaseConfig';
 
 export default {
-	name: 'imgHolder',
+	name: 'contHolder',
 	mixins: [RoleCompMixin],
 	data() {
 		return {
 			timeout: [],
-			formData: {}
+			formData: {},
+			sending: false,
+			message: ''
 		};
 	},
 	methods: {
 		sendMail() {
-			msgCollection.add(this.formData);
+			this.sending = true;
+			this.message = 'Sending Message...';
+			msgCollection
+				.add(this.formData)
+				.then(() => {
+					this.message = "YaY! I'll get back to you Soon!";
+					setTimeout(this.closeModal, 1000);
+				})
+				.catch(() => {
+					this.message = 'Some Error Occoured.. Please Try again';
+					setTimeout(() => (this.sending = false), 500);
+				});
 		}
 	}
 };
