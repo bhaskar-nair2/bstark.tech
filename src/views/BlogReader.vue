@@ -18,7 +18,7 @@
 export default {
 	name: 'BlogReader',
 	components: {
-		globalNav: () => import('@/components/blogComps/globalNav'),
+		globalNav: () => import('@/components/globalNav'),
 		blogCards: () => import('@/components/blogComps/blogCards')
 	}
 };

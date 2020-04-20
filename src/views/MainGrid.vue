@@ -7,6 +7,7 @@
 			Math Fuckup. Please Reload.
 		</div>
 		<div id="mainCont" v-else>
+			<globalNav></globalNav>
 			<h1 :class="`grayzone${this.isMobile ? '--mobile' : ''}`">
 				Grayzone
 			</h1>
@@ -35,7 +36,8 @@ export default {
 	name: 'MainGridView',
 	components: {
 		box,
-		social: () => import('@/components/socialNav')
+		social: () => import('@/components/socialNav'),
+		globalNav: () => import('@/components/globalNav')
 	},
 	created: function() {
 		this.setup();
@@ -90,8 +92,8 @@ export default {
 				this.rows = 6;
 				this.cols = 17;
 				this.t3 = 4;
-				this.t2 = 7;
-				this.t1 = 12;
+				this.t2 = 6;
+				this.t1 = 8;
 			}
 			this.role = roleData;
 		},
