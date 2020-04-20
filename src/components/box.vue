@@ -68,6 +68,8 @@ export default {
 					return { name: 'storyHold' };
 				case 'route':
 					return { name: 'routeHold' };
+				case 'to_site':
+					return { name: 'routeHold' };
 				default:
 					return { name: '' };
 			}
