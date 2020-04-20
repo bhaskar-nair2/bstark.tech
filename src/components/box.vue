@@ -37,7 +37,8 @@ export default {
 		songHold: () => import('@/components/roleHolders/songHold'),
 		storyHold: () => import('@/components/roleHolders/storyHold'),
 		contactHold: () => import('@/components/roleHolders/contactHold'),
-		routeHold: () => import('@/components/roleHolders/routeHold')
+		routeHold: () => import('@/components/roleHolders/routeHold'),
+		toSite: () => import('@/components/roleHolders/toSite')
 	},
 	props: {
 		boxData: {
@@ -50,7 +51,8 @@ export default {
 			appear: true,
 			elevated: false,
 			comps: { name: 'imgHolder', typ: 'img' },
-			modal: false
+			modal: false,
+			noShow: ['route', 'toSite']
 		};
 	},
 	computed: {
@@ -69,7 +71,7 @@ export default {
 				case 'route':
 					return { name: 'routeHold' };
 				case 'to_site':
-					return { name: 'routeHold' };
+					return { name: 'toSite' };
 				default:
 					return { name: '' };
 			}
@@ -115,7 +117,10 @@ export default {
 	},
 	methods: {
 		showModal() {
-			if (this.component.name !== '' || this.component.name == 'route') {
+			if (
+				this.component.name !== '' &&
+				!this.noShow.includes(this.component.name)
+			) {
 				this.modal = true;
 				this.$refs.boxComp.showModal();
 			}
