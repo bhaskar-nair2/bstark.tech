@@ -38,10 +38,7 @@ export default {
 		social: () => import('@/components/socialNav')
 	},
 	created: function() {
-		if (this.isMobile) {
-			this.rows = 16;
-			this.cols = 6;
-		}
+		this.setup();
 	},
 	mounted: async function() {
 		this.renderBoxes();
@@ -52,11 +49,11 @@ export default {
 			 at the end and decrease the size of the grid */
 			renderError: false,
 			boxes: [],
-			rows: 6,
-			cols: 16,
-			t3: 3,
-			t2: 6,
-			t1: 9,
+			rows: 0,
+			cols: 0,
+			t3: 0,
+			t2: 0,
+			t1: 0,
 			role: roleData
 			// fetch this from firebase
 		};
@@ -82,6 +79,22 @@ export default {
 		}
 	},
 	methods: {
+		setup() {
+			if (this.isMobile) {
+				this.rows = 16;
+				this.cols = 6;
+				this.t3 = 3;
+				this.t2 = 6;
+				this.t1 = 12;
+			} else {
+				this.rows = 8;
+				this.cols = 17;
+				this.t3 = 5;
+				this.t2 = 8;
+				this.t1 = 12;
+			}
+			this.role = roleData;
+		},
 		renderBoxes() {
 			try {
 				// 7 rows 14 columns type3:3, type2:6 type1:9
