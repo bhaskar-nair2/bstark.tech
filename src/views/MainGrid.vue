@@ -83,15 +83,15 @@ export default {
 			if (this.isMobile) {
 				this.rows = 16;
 				this.cols = 6;
-				this.t3 = 3;
+				this.t3 = 4;
 				this.t2 = 6;
-				this.t1 = 12;
+				this.t1 = 8;
 			} else {
 				this.rows = 6;
 				this.cols = 17;
 				this.t3 = 4;
 				this.t2 = 7;
-				this.t1 = 10;
+				this.t1 = 12;
 			}
 			this.role = roleData;
 		},

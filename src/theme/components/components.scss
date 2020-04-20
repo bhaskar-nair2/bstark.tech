@@ -8,8 +8,11 @@
 	color: $silver1;
 	margin: 1px;
 	// text-decoration: underline;
-	font-size: 4vw;
-	opacity: 0.2;
+	top: 10vh;
+	font-size: 23vw;
+	position: absolute;
+	opacity: 0.09;
+	user-select: none;
 	&--mobile {
 		color: $silver1;
 		margin: 10px;
