@@ -1,11 +1,12 @@
 <template>
 	<a
 		@click.passive="open"
-		href="https://dribbble.com/bhaskar_nair2"
+		:href="dets.link"
 		style="color:unset"
 		target="blank"
+		class="toSiteHold"
 	>
-		<v-icon class="socialIcon" name="brands/dribbble" scale="2" />
+		<v-icon class="socialIcon" :name="dets.icon" scale="2" />
 	</a>
 </template>
 

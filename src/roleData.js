@@ -135,9 +135,61 @@ const role = [
 			route: 'blogReader'
 		}
 	},
-	{ type: 'to_site', priority: 2, props: { name: 'dribble' } },
-	{ type: 'to_site', priority: 1, props: { name: 'ig' } },
-	{ type: 'to_site', priority: 1, props: { name: 'linkedin' } },
+	{
+		type: 'to_site',
+		priority: 1,
+		props: {
+			name: 'dribble',
+			link: 'https://dribbble.com/bhaskar_nair2',
+			icon: 'brands/dribbble'
+		}
+	},
+	{
+		type: 'to_site',
+		priority: 1,
+		props: {
+			name: 'ig',
+			link: 'https://www.instagram.com/bas_kar_na_yar',
+			icon: 'brands/instagram'
+		}
+	},
+	{
+		type: 'to_site',
+		priority: 1,
+		props: {
+			name: 'stackoverflow',
+			link:
+				'https://stackoverflow.com/users/4347232/bhaskar?tab=profile',
+			icon: 'brands/stack-overflow'
+		}
+	},
+	{
+		type: 'to_site',
+		priority: 1,
+		props: {
+			name: 'gitlab',
+			link: 'https://gitlab.com/bhaskar-nair2',
+			icon: 'brands/gitlab'
+		}
+	},
+	{
+		type: 'to_site',
+		priority: 1,
+		props: {
+			name: 'github',
+			link: 'https://github.com/bhaskar-nair2',
+			icon: 'brands/github'
+		}
+	},
+	{
+		type: 'to_site',
+		priority: 1,
+		props: {
+			name: 'linkedin',
+			link: 'https://www.linkedin.com/in/bhaskar-nair2/',
+			icon: 'brands/linkedin-in'
+		}
+	},
 	{ type: 'quote', priority: 1, props: {} },
 	{ type: 'quote', priority: 1, props: {} },
 	{ type: 'site', priority: 1, props: { name: 'tbw' } },

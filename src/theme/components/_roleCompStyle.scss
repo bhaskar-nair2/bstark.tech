@@ -179,6 +179,17 @@
 	}
 }
 
+.toSiteHold {
+	@extend %baseSet;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $black;
+	margin: 0;
+}
+
 .noComp {
 	@extend %baseSet;
 	background-color: $backgroundcolor;

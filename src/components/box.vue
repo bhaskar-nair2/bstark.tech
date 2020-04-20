@@ -38,7 +38,7 @@ export default {
 		storyHold: () => import('@/components/roleHolders/storyHold'),
 		contactHold: () => import('@/components/roleHolders/contactHold'),
 		routeHold: () => import('@/components/roleHolders/routeHold'),
-		toSite: () => import('@/components/roleHolders/toSite')
+		toSite: () => import('@/components/roleHolders/toSiteHold')
 	},
 	props: {
 		boxData: {
