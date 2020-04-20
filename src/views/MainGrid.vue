@@ -87,10 +87,10 @@ export default {
 				this.t2 = 6;
 				this.t1 = 12;
 			} else {
-				this.rows = 8;
+				this.rows = 6;
 				this.cols = 17;
-				this.t3 = 5;
-				this.t2 = 8;
+				this.t3 = 4;
+				this.t2 = 6;
 				this.t1 = 12;
 			}
 			this.role = roleData;

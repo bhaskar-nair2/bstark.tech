@@ -8,14 +8,14 @@ const role = [
 				'https://firebasestorage.googleapis.com/v0/b/bstark-tech.appspot.com/o/IMG_20181208_194704_037.jpg?alt=media&token=90b4e5cf-f1d8-41d9-a80c-d41ce6961624'
 		}
 	},
-	{
-		type: 'img',
-		priority: 3,
-		props: {
-			name: 'logo',
-			imgUrl: 'https://picsum.photos/id/1027/500'
-		}
-	},
+	// {
+	// 	type: 'img',
+	// 	priority: 3,
+	// 	props: {
+	// 		name: 'logo',
+	// 		imgUrl: 'https://picsum.photos/id/1027/500'
+	// 	}
+	// },
 	{
 		type: 'poem',
 		priority: 2,
@@ -84,7 +84,7 @@ const role = [
 	},
 	{
 		type: 'song',
-		priority: 2,
+		priority: 3,
 		props: {
 			title: 'Crywolf & EDEN- Stomach It',
 			caption: '<3',

@@ -57,24 +57,26 @@ export default {
 	},
 	computed: {
 		component: function() {
-			switch (this.role.type) {
-				case 'img':
-					return { name: 'imgHold' };
-				case 'poem':
-					return { name: 'poemHold' };
-				case 'song':
-					return { name: 'songHold' };
-				case 'contact':
-					return { name: 'contactHold' };
-				case 'story':
-					return { name: 'storyHold' };
-				case 'route':
-					return { name: 'routeHold' };
-				case 'to_site':
-					return { name: 'toSite' };
-				default:
-					return { name: '' };
-			}
+			if (this.role)
+				switch (this.role.type) {
+					case 'img':
+						return { name: 'imgHold' };
+					case 'poem':
+						return { name: 'poemHold' };
+					case 'song':
+						return { name: 'songHold' };
+					case 'contact':
+						return { name: 'contactHold' };
+					case 'story':
+						return { name: 'storyHold' };
+					case 'route':
+						return { name: 'routeHold' };
+					case 'to_site':
+						return { name: 'toSite' };
+					default:
+						return { name: '' };
+				}
+			else return { name: '' };
 		},
 		position() {
 			return {
@@ -89,7 +91,7 @@ export default {
 			return this.boxData.position;
 		},
 		typ() {
-			return this.boxData.type;
+			return this.boxData.type || 'box1';
 		},
 		role() {
 			return this.boxData.role;
