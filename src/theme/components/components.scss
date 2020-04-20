@@ -5,9 +5,17 @@
 @import './blogStyles';
 
 .grayzone {
-	color: $gray2;
-	margin: 10px 10px 30px 10px;
+	color: $silver1;
+	margin: 1px;
 	// text-decoration: underline;
+	font-size: 5vw;
+	opacity: 0.2;
+	&--mobile {
+		color: $silver1;
+		margin: 10px;
+		font-size: 10vw;
+		opacity: 0.2;
+	}
 }
 
 .version {

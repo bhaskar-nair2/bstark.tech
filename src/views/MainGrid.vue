@@ -7,7 +7,9 @@
 			Math Fuckup. Please Reload.
 		</div>
 		<div id="mainCont" v-else>
-			<h1 class="grayzone">Grayzone</h1>
+			<h1 :class="`grayzone${this.isMobile ? '--mobile' : ''}`">
+				Grayzone
+			</h1>
 			<div
 				:class="`mainGrid${this.isMobile ? '--mobile' : ''}`"
 				:style="gridSize"
@@ -50,8 +52,8 @@ export default {
 			 at the end and decrease the size of the grid */
 			renderError: false,
 			boxes: [],
-			rows: 7,
-			cols: 14,
+			rows: 6,
+			cols: 16,
 			t3: 3,
 			t2: 6,
 			t1: 9,
@@ -96,7 +98,15 @@ export default {
 			} catch (error) {
 				this.renderError = true;
 			}
+		},
+		setVals() {
+			this.t3 = 3;
+			this.t2 = 6;
+			this.t1 = 9;
 		}
+		// getRandomArbitrary(min, max) {
+		// 	return Math.random() * (max - min) + min;
+		// }
 	}
 };
 </script>
