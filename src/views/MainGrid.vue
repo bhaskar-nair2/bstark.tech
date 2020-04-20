@@ -41,7 +41,7 @@ export default {
 		this.setup();
 	},
 	mounted: async function() {
-		this.renderBoxes();
+		await this.renderBoxes();
 	},
 	data() {
 		return {
@@ -89,16 +89,17 @@ export default {
 			} else {
 				this.rows = 6;
 				this.cols = 17;
-				this.t3 = 4;
-				this.t2 = 7;
-				this.t1 = 10;
+				this.t3 = this.getRandomArbitrary(2, 4);
+				this.t2 = this.getRandomArbitrary(6, 8);
+				this.t1 = this.getRandomArbitrary(8, 12);
 			}
 			this.role = roleData;
 		},
-		renderBoxes() {
+		async renderBoxes() {
+			var min_t1 = 6;
+			var min_t2 = 4;
 			try {
-				// 7 rows 14 columns type3:3, type2:6 type1:9
-				let boxxs = box_maker(this.rows, this.cols, {
+				let boxxs = await box_maker(this.rows, this.cols, {
 					t3: this.t3,
 					t2: this.t2,
 					t1: this.t1
@@ -109,17 +110,18 @@ export default {
 				this.boxes = boxxs;
 				this.renderError = false;
 			} catch (error) {
-				this.renderError = true;
+				if (this.t1 < min_t1 && this.t2 < min_t2) {
+					this.renderError = true;
+					return;
+				}
+				if (this.t1 >= min_t1) this.t1 -= this.t1;
+				else if (this.t2 >= min_t2) this.t2 -= this.t2;
+				this.renderBoxes();
 			}
 		},
-		setVals() {
-			this.t3 = 3;
-			this.t2 = 6;
-			this.t1 = 9;
+		getRandomArbitrary(min, max) {
+			return parseInt(Math.random() * (max - min) + min);
 		}
-		// getRandomArbitrary(min, max) {
-		// 	return Math.random() * (max - min) + min;
-		// }
 	}
 };
 </script>
