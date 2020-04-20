@@ -135,6 +135,9 @@ const role = [
 			route: 'blogReader'
 		}
 	},
+	{ type: 'to_site', priority: 2, props: { name: 'dribble' } },
+	{ type: 'to_site', priority: 1, props: { name: 'ig' } },
+	{ type: 'to_site', priority: 1, props: { name: 'linkedin' } },
 	{ type: 'quote', priority: 1, props: {} },
 	{ type: 'quote', priority: 1, props: {} },
 	{ type: 'site', priority: 1, props: { name: 'tbw' } },
