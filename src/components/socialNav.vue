@@ -2,11 +2,11 @@
 	<div>
 		<div :class="`socialRow${isMobile ? '--mobile' : ''}`">
 			<a
-				href="https://dribbble.com/bhaskar_nair2"
+				href="https://twitter.com/bas_kar_na_yar"
 				style="color:unset"
 				target="blank"
 			>
-				<v-icon class="socialIcon" name="brands/dribbble" scale="2" />
+				<v-icon class="socialIcon" name="brands/twitter" scale="2" />
 			</a>
 			<a
 				href="https://www.instagram.com/bas_kar_na_yar"
