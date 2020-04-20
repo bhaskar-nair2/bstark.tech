@@ -35,7 +35,7 @@ function box_maker(row, col, types) {
 
 	function randomer(ty) {
 		let i = 0;
-		while (i <= 90) {
+		while (i <= 900) {
 			var v_x =
 				arr_x[Math.abs(Math.floor(Math.random() * arr_x.length) - 3 + 1)];
 			if (v_x + ty > !arr_x.length) {
@@ -66,9 +66,4 @@ function box_maker(row, col, types) {
 	return cords;
 }
 
-function type_count_maker(roleList) {
-	// auto make box type nnumber
-	return roleList;
-}
-
-export { box_maker, type_count_maker };
+export { box_maker };
