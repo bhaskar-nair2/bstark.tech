@@ -77,7 +77,7 @@ const role = [
 		props: {
 			title: 'Post Rock',
 			caption: 'Give it a try',
-			vidUrl: 'https://www.youtube.com/embed/qtGWaQ-arnw',
+			vidUrl: 'https://www.youtube.com/embed/qtGWaQ-arnw?rel=0&vq=large',
 			imgUrl:
 				'https://s3.amazonaws.com/factmag-images/wp-content/uploads/2016/04/02162215/FACT30BestPostRockAlbums-illustrationJosephGough.jpg'
 		}

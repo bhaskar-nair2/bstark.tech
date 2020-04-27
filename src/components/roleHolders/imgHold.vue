@@ -6,14 +6,15 @@
 			</button>
 		</div>
 		<div class="content">
-			<img :src="dets.imgUrl" class="color modalImg" />
+			<img :src="dets.imgUrl" class="color modalImg" loading="lazy" />
 		</div>
 	</div>
 
 	<div class="roleImg" v-else>
 		<img
 			:class="{ color: modal || color, wavy: wavy }"
-			:src="dets.imgUrl"
+			rel="preload"
+			v-lazy="dets.imgUrl"
 		/>
 	</div>
 </template>
