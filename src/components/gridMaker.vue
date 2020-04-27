@@ -6,23 +6,17 @@
 			</a>
 			Math Fuckup. Please Reload.
 		</div>
-		<div id="mainCont" v-else>
-			<globalNav></globalNav>
-			<h1 :class="`grayzone${this.isMobile ? '--mobile' : ''}`">
-				Grayzone
-			</h1>
-			<div
-				:class="`mainGrid${this.isMobile ? '--mobile' : ''}`"
-				:style="gridSize"
-				id="mainGrid"
-			>
-				<box
-					:boxData="boxData"
-					:key="boxData.id"
-					v-for="boxData in boxes"
-				></box>
-			</div>
-			<social></social>
+		<div
+			:class="`mainGrid${this.isMobile ? '--mobile' : ''}`"
+			:style="gridSize"
+			id="mainGrid"
+			v-else
+		>
+			<box
+				:boxData="boxData"
+				:key="boxData.id"
+				v-for="boxData in boxes"
+			></box>
 		</div>
 	</div>
 </template>
@@ -33,11 +27,9 @@ import { box_maker } from '@/services/boxMaker.js';
 import roleData from '@/roleData';
 
 export default {
-	name: 'MainGridView',
+	name: 'GridMaker',
 	components: {
-		box,
-		social: () => import('@/components/socialNav'),
-		globalNav: () => import('@/components/globalNav')
+		box
 	},
 	created: function() {
 		this.setup();
@@ -123,11 +115,10 @@ export default {
 				}
 				this.boxes = boxxs;
 				this.renderError = false;
-				console.log(this.t1, this.t2, this.t3);
 			} catch (error) {
 				if (this.t1 <= min_t1 && this.t2 <= min_t2 && this.t3 <= min_t3) {
-					this.renderError = true;
 					console.log(this.t1, this.t2, this.t3);
+					this.renderError = true;
 					return;
 				} else {
 					if (this.t1 >= min_t1) this.t1 -= 1;
@@ -144,4 +135,4 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style></style>
