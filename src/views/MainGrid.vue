@@ -85,27 +85,31 @@ export default {
 			if (this.isMobile) {
 				this.rows = 16;
 				this.cols = 6;
-				this.t3 = 4;
-				this.t2 = 6;
-				this.t1 = 8;
+				this.t3 = 5;
+				this.t2 = 8;
+				this.t1 = 12;
 			} else {
 				this.rows = 6;
 				this.cols = 17;
-				this.t3 = this.getRandomArbitrary(2, 4);
-				this.t2 = this.getRandomArbitrary(6, 8);
-				this.t1 = this.getRandomArbitrary(8, 12);
+				this.t3 = this.getRandomArbitrary(2, 8);
+				this.t2 = this.getRandomArbitrary(6, 12);
+				this.t1 = this.getRandomArbitrary(8, 16);
 			}
 			this.role = roleData;
 		},
 		async renderBoxes() {
 			var min_t1;
 			var min_t2;
+			var min_t3;
+
 			if (this.isMobile) {
 				min_t1 = 6;
 				min_t2 = 4;
+				min_t3 = 3;
 			} else {
 				min_t1 = 6;
 				min_t2 = 4;
+				min_t3 = 3;
 			}
 
 			try {
@@ -119,13 +123,16 @@ export default {
 				}
 				this.boxes = boxxs;
 				this.renderError = false;
+				console.log(this.t1, this.t2, this.t3);
 			} catch (error) {
-				if (this.t1 < min_t1 || this.t2 < min_t2) {
+				if (this.t1 <= min_t1 && this.t2 <= min_t2 && this.t3 <= min_t3) {
 					this.renderError = true;
+					console.log(this.t1, this.t2, this.t3);
 					return;
 				} else {
 					if (this.t1 >= min_t1) this.t1 -= 1;
 					else if (this.t2 >= min_t2) this.t2 -= 1;
+					else if (this.t3 >= min_t3) this.t3 -= 1;
 					this.renderBoxes();
 				}
 			}
