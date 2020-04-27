@@ -113,25 +113,24 @@
 		background: white;
 		text-align: center;
 		padding: 30px;
-		width: 500px;
 		.formIcon {
 			.icn {
 				justify-self: center;
 				color: $gray2;
 			}
 		}
-
 		form {
 			display: inline-flex;
 			flex-direction: column;
 			justify-content: center;
 			.inputBox {
 				display: flex;
-				margin: 10px;
-				width: 400px;
+				margin: 10px 12px;
+				width: 70vw;
 				justify-content: space-between;
 				.input {
-					width: 300px;
+					width: 50vw;
+
 				}
 			}
 		}
