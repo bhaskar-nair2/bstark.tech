@@ -34,4 +34,3 @@ function layMaker() {
 
 // export default layMaker;
 
-console.log(layMaker());

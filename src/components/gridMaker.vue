@@ -117,7 +117,7 @@ export default {
 				this.renderError = false;
 			} catch (error) {
 				if (this.t1 <= min_t1 && this.t2 <= min_t2 && this.t3 <= min_t3) {
-					console.log(this.t1, this.t2, this.t3);
+					// console.log(this.t1, this.t2, this.t3);
 					this.renderError = true;
 					return;
 				} else {

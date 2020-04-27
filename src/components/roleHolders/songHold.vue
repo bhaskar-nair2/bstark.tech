@@ -48,7 +48,6 @@ export default {
 			return this.dets.title || '';
 		},
 		size() {
-			console.log();
 			if (this.isMobile) {
 				return {
 					height: 250,
