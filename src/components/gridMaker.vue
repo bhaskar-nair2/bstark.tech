@@ -131,6 +131,13 @@ export default {
 		getRandomArbitrary(min, max) {
 			return parseInt(Math.random() * (max - min) + min);
 		}
+	},
+	watch: {
+		isMobile: {
+			handler() {
+				this.renderBoxes();
+			}
+		}
 	}
 };
 </script>

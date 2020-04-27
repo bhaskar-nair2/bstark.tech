@@ -1,7 +1,8 @@
 <template>
 	<div>
-		<globalNav></globalNav>
-		<blogCards></blogCards>
+		<div id="mainCont">
+			<blogCards></blogCards>
+		</div>
 		<!-- Title -->
 		<!-- Subtitle-1 -->
 		<!-- Content-1 -->
@@ -18,7 +19,6 @@
 export default {
 	name: 'BlogReader',
 	components: {
-		globalNav: () => import('@/components/globalNav'),
 		blogCards: () => import('@/components/blogComps/blogCards')
 	}
 };

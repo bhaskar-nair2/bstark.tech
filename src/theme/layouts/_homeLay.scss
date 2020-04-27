@@ -1,14 +1,21 @@
+#app {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
 #mainCont {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 }
 .mainGrid {
 	display: grid;
 	gap: 0.5vw;
 	margin: 2vw 0;
+	max-height: 80vh;
 	&--mobile {
 		display: grid;
 		gap: 1vh;

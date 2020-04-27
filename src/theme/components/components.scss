@@ -1,61 +1,6 @@
 @import './box';
-@import './socialNav';
+@import'./layoutComps';
 @import './roleCompStyle';
 @import './modalCompStyle';
 @import './blogStyles';
 
-.grayzone {
-	color: $silver1;
-	margin: 1px;
-	// text-decoration: underline;
-	top: 15vh;
-	font-size: 23vw;
-	position: absolute;
-	opacity: 0.12;
-	user-select: none;
-	pointer-events: none;
-	z-index: 1;
-	&--mobile {
-		color: $silver1;
-		margin: 10px;
-		font-size: 10vw;
-		opacity: 0.2;
-	}
-}
-
-.version {
-	position: fixed;
-	bottom: 2px;
-	right: 5px;
-	margin: 0 0;
-	color: $gray2;
-}
-
-.reloadMsg {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	height: 120px;
-	.reBtn {
-		cursor: pointer;
-		height: 50px;
-		width: 50px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: 5px solid white;
-		border-radius: 15px;
-		box-shadow: 1px 1px 10px black;
-		transition: all 0.5s ease-in-out;
-		svg {
-			transition: all 0.5s ease-in-out;
-		}
-		&:hover {
-			box-shadow: 1px 1px 20px black;
-			svg {
-				transform: rotate(180deg) scale(1.2);
-			}
-		}
-	}
-}
