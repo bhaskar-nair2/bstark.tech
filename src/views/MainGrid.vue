@@ -98,8 +98,16 @@ export default {
 			this.role = roleData;
 		},
 		async renderBoxes() {
-			var min_t1 = 6;
-			var min_t2 = 4;
+			var min_t1;
+			var min_t2;
+			if (this.isMobile) {
+				min_t1 = 6;
+				min_t2 = 4;
+			} else {
+				min_t1 = 6;
+				min_t2 = 4;
+			}
+
 			try {
 				let boxxs = await box_maker(this.rows, this.cols, {
 					t3: this.t3,
@@ -112,13 +120,14 @@ export default {
 				this.boxes = boxxs;
 				this.renderError = false;
 			} catch (error) {
-				if (this.t1 < min_t1 && this.t2 < min_t2) {
+				if (this.t1 < min_t1 || this.t2 < min_t2) {
 					this.renderError = true;
 					return;
+				} else {
+					if (this.t1 >= min_t1) this.t1 -= 1;
+					else if (this.t2 >= min_t2) this.t2 -= 1;
+					this.renderBoxes();
 				}
-				if (this.t1 >= min_t1) this.t1 -= this.t1;
-				else if (this.t2 >= min_t2) this.t2 -= this.t2;
-				this.renderBoxes();
 			}
 		},
 		getRandomArbitrary(min, max) {
