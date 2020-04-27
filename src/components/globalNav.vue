@@ -2,10 +2,7 @@
 	<div>
 		<nav class="navBar">
 			<div class="navList">
-				<router-link
-					active-class="active"
-					exact-active-class
-					:to="{ name: 'home' }"
+				<router-link active-class="active" exact :to="{ name: 'home' }"
 					>Home</router-link
 				>
 				<router-link active-class="active" :to="{ name: 'blogReader' }"
