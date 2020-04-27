@@ -57,6 +57,24 @@
 			max-width: 600px;
 		}
 	}
+	.intro {
+		width: 90vw;
+		max-width: 600px;
+		text-align: left;
+		.introData {
+			background-color: white;
+			padding: 10px;
+		}
+		a {
+			color: #551a8b !important;
+		}
+		h3 {
+			margin-bottom: 0;
+		}
+		p {
+			line-height: 1.7;
+		}
+	}
 }
 
 .rolePoem--modal {
@@ -125,12 +143,25 @@
 			justify-content: center;
 			.inputBox {
 				display: flex;
+				justify-content: space-between;
+			}
+		}
+
+		@media (min-width: 1020px) {
+			.inputBox {
+				margin: 10px 12px;
+				width: 30vw;
+				.input {
+					width: 20vw;
+				}
+			}
+		}
+		@media (max-width: 500px) {
+			.inputBox {
 				margin: 10px 12px;
 				width: 70vw;
-				justify-content: space-between;
 				.input {
 					width: 50vw;
-
 				}
 			}
 		}

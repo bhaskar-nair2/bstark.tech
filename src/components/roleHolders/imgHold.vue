@@ -8,6 +8,9 @@
 		<div class="content">
 			<img :src="dets.imgUrl" class="color modalImg" loading="lazy" />
 		</div>
+		<div class="intro" v-if="dets.name == 'disp'">
+			<intro></intro>
+		</div>
 	</div>
 
 	<div class="roleImg" v-else>
@@ -27,6 +30,9 @@ export default {
 	mixins: [RoleCompMixin],
 	created() {
 		// this.wavyImg();
+	},
+	components: {
+		intro: () => import('@/components/intro.vue')
 	},
 	data() {
 		return {
