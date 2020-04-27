@@ -1,16 +1,22 @@
 <template>
 	<div id="app">
 		<baseModal></baseModal>
+		<globalNav></globalNav>
 		<router-view />
+		<social></social>
 		<h5 class="version">v2.1.5 Grayzone</h5>
 	</div>
 </template>
 
 <script>
+import social from '@/components/socialNav';
+
 export default {
 	name: 'App',
 	components: {
-		baseModal: () => import('@/components/baseModal')
+		baseModal: () => import('@/components/baseModal'),
+		globalNav: () => import('@/components/globalNav'),
+		social
 	}
 };
 </script>
