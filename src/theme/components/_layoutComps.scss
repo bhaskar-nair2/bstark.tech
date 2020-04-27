@@ -1,0 +1,116 @@
+.grayzone {
+	color: $silver1;
+	margin: 1px;
+	// text-decoration: underline;
+	top: 15vh;
+	font-size: 23vw;
+	position: absolute;
+	opacity: 0.12;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1;
+	&--mobile {
+		color: $silver1;
+		margin: 10px;
+		font-size: 10vw;
+		opacity: 0.2;
+	}
+}
+
+.version {
+	position: fixed;
+	bottom: 2px;
+	right: 5px;
+	margin: 0 0;
+	color: $gray2;
+}
+
+.reloadMsg {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 120px;
+	.reBtn {
+		cursor: pointer;
+		height: 50px;
+		width: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 5px solid white;
+		border-radius: 15px;
+		box-shadow: 1px 1px 10px black;
+		transition: all 0.5s ease-in-out;
+		svg {
+			transition: all 0.5s ease-in-out;
+		}
+		&:hover {
+			box-shadow: 1px 1px 20px black;
+			svg {
+				transform: rotate(180deg) scale(1.2);
+			}
+		}
+	}
+}
+
+#socialNav {
+  position: absolute;
+	padding-top: 1vw;
+  width: 30vw;
+  bottom: 10vh;
+	.iconHolder {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			margin-right: 20px;
+		}
+	}
+}
+
+.socialRow {
+	display: flex;
+	justify-content: space-between;
+	width: 20vw;
+	justify-self: end;
+	border-top: 1px solid gainsboro;
+	border-bottom: 1px solid gainsboro;
+	padding: 20px;
+	transition: all 2s ease-in-out;
+	a {
+		color: unset !important;
+		margin: unset;
+		&:any-link {
+			color: unset;
+		}
+	}
+	.socialIcon {
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	&--mobile {
+		display: flex;
+		justify-content: space-between;
+		justify-self: end;
+		border-top: 1px solid gainsboro;
+		border-bottom: 1px solid gainsboro;
+		padding: 20px;
+		transition: all 2s ease-in-out;
+		width: 50vw;
+		margin: 20px 0;
+	}
+}
+
+.btn{
+	background-color: $gray3;
+	border-radius: 15px;
+	box-shadow: 1px 1px 4px gray;
+	padding: 10px;
+	font-family: $textFont;
+	font-weight: 500;
+	border: unset;
+}
