@@ -35,7 +35,7 @@
 		</div>
 	</div>
 	<div class="roleStory" v-else>
-		<div class="roleOverlay">Read..</div>
+		<!-- <div class="roleOverlay">Read..</div> -->
 		<p>{{ textFmt(dets.title) }}</p>
 	</div>
 </template>

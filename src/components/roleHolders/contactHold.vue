@@ -37,11 +37,12 @@
 						cols="20"
 						id="msg"
 						rows="6"
+						required
 						v-model="formData.message"
 					/>
 				</div>
 				<div class="sub">
-					<button type="submit">Send</button>
+					<button class="btn" type="submit">Send</button>
 				</div>
 				<p v-if="sending">{{ message }}</p>
 			</form>

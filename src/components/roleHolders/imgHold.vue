@@ -6,14 +6,18 @@
 			</button>
 		</div>
 		<div class="content">
-			<img :src="dets.imgUrl" class="color modalImg" />
+			<img :src="dets.imgUrl" class="color modalImg" loading="lazy" />
+		</div>
+		<div class="intro" v-if="dets.name == 'disp'">
+			<intro></intro>
 		</div>
 	</div>
 
 	<div class="roleImg" v-else>
 		<img
 			:class="{ color: modal || color, wavy: wavy }"
-			:src="dets.imgUrl"
+			rel="preload"
+			v-lazy="dets.imgUrl"
 		/>
 	</div>
 </template>
@@ -26,6 +30,9 @@ export default {
 	mixins: [RoleCompMixin],
 	created() {
 		// this.wavyImg();
+	},
+	components: {
+		intro: () => import('@/components/intro.vue')
 	},
 	data() {
 		return {

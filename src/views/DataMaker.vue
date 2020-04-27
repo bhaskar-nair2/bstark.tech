@@ -64,7 +64,7 @@ export default {
 			for (var i = 0; i < this.propArr.length; i++) {
 				obj.props[this.propArr[i].key] = this.propArr[i].value;
 			}
-			console.log(obj);
+			// console.log(obj);
 			gridCollection.add(this.formData);
 		},
 		addProp() {

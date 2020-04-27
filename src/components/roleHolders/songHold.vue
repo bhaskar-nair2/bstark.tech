@@ -7,18 +7,24 @@
 		</div>
 		<div class="content">
 			<iframe
+				:height="size.height"
 				:src="dets.vidUrl"
+				seamless
+				:width="size.width"
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen
 				frameborder="0"
-				height="315"
-				width="560"
 			></iframe>
 		</div>
 	</div>
 	<div class="roleSong" v-else>
 		<div class="front">
-			<img :class="color ? 'color' : ''" :src="dets.imgUrl" />
+			<img
+				:class="color ? 'color' : ''"
+				load
+				rel="preload"
+				v-lazy="dets.imgUrl"
+			/>
 		</div>
 		<div class="back">
 			<span class="songTitle">{{ textFmt(text) }}</span>
@@ -40,6 +46,20 @@ export default {
 	computed: {
 		text() {
 			return this.dets.title || '';
+		},
+		size() {
+			console.log();
+			if (this.isMobile) {
+				return {
+					height: 250,
+					width: window.innerWidth - 50
+				};
+			} else {
+				return {
+					height: window.innerHeight - 300,
+					width: window.innerWidth - 500
+				};
+			}
 		}
 	}
 };

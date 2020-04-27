@@ -8,7 +8,7 @@ const routes = [
 		path: '/',
 		name: 'home',
 		component: () =>
-			import(/* webpackChunkName: "main" */ '@/views/MainGrid.vue')
+			import(/* webpackChunkName: "main" */ '@/views/HomeLayout.vue')
 	},
 	{
 		path: '/blog/:id?',

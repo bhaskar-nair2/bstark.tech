@@ -1,7 +1,7 @@
 const role = [
 	{
 		type: 'img',
-		priority: 2,
+		priority: 2.8,
 		props: {
 			name: 'disp',
 			imgUrl:
@@ -69,15 +69,14 @@ const role = [
 		}
 	},
 	{ type: 'current_state', priority: 1, props: { name: 'state' } },
-	{ type: 'contact', priority: 1, props: { name: 'Bhaskar' } },
-	{ type: 'resume', priority: 1, props: { name: 'canvaRes' } },
+	{ type: 'contact', priority: 1.5, props: { name: 'Bhaskar' } },
 	{
 		type: 'song',
 		priority: 3,
 		props: {
 			title: 'Post Rock',
 			caption: 'Give it a try',
-			vidUrl: 'https://www.youtube.com/embed/qtGWaQ-arnw',
+			vidUrl: 'https://www.youtube.com/embed/qtGWaQ-arnw?rel=0&vq=large',
 			imgUrl:
 				'https://s3.amazonaws.com/factmag-images/wp-content/uploads/2016/04/02162215/FACT30BestPostRockAlbums-illustrationJosephGough.jpg'
 		}
@@ -109,7 +108,7 @@ const role = [
 	},
 	{
 		type: 'img',
-		priority: 2,
+		priority: 1.7,
 		props: {
 			name: 'streetArt',
 			imgUrl:

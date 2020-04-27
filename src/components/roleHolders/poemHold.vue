@@ -13,7 +13,7 @@
 		</div>
 	</div>
 	<div class="rolePoem" v-else>
-		<div class="roleOverlay">Read..</div>
+		<!-- <div class="roleOverlay">Read..</div> -->
 		<p>{{ textFmt(dets.title) }}</p>
 	</div>
 </template>
