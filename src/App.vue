@@ -2,7 +2,9 @@
 	<div id="app">
 		<baseModal></baseModal>
 		<globalNav></globalNav>
-		<router-view />
+		<transition name="fade">
+			<router-view />
+		</transition>
 		<social></social>
 		<h5 class="version">v2.1.5 Grayzone</h5>
 	</div>

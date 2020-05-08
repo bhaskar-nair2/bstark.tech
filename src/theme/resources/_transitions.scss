@@ -1,19 +1,29 @@
-.fade-enter-active,
-.fade-leave-active {
-	transition: opacity 0.5s;
+// Fade
+.fade-enter-active {
+	transition: opacity 1s ease;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-leave-active {
+	transition: opacity 1s ease;
+	display: none;
+}
+.fade-enter {
 	opacity: 0;
 }
 
-@keyframes fade {
-	0% {
-		opacity: 0.4;
-	}
-	100% {
-		opacity: 1;
-	}
+.fade-leave-to {
+	opacity: 0;
+	display: none;
 }
+
+
+// @keyframes fade {
+// 	0% {
+// 		opacity: 0.4;
+// 	}
+// 	100% {
+// 		opacity: 1;
+// 	}
+// }
 
 @keyframes wavy {
 
