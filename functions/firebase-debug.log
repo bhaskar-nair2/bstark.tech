@@ -1,0 +1,227 @@
+[debug] [2020-05-08T05:53:51.149Z] ----------------------------------------------------------------------
+[debug] [2020-05-08T05:53:51.150Z] Command:       /usr/bin/node /usr/bin/firebase functions:shell
+[debug] [2020-05-08T05:53:51.150Z] CLI Version:   8.2.0
+[debug] [2020-05-08T05:53:51.150Z] Platform:      linux
+[debug] [2020-05-08T05:53:51.150Z] Node Version:  v12.16.2
+[debug] [2020-05-08T05:53:51.151Z] Time:          Fri May 08 2020 11:23:51 GMT+0530 (India Standard Time)
+[debug] [2020-05-08T05:53:51.151Z] ----------------------------------------------------------------------
+[debug] [2020-05-08T05:53:51.151Z] 
+[debug] [2020-05-08T05:53:51.154Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-08T05:53:51.155Z] > authorizing via signed-in user
+[debug] [2020-05-08T05:53:51.155Z] [iam] checking project bstark-tech for permissions ["firebase.projects.get"]
+[debug] [2020-05-08T05:53:51.156Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bstark-tech:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-08T05:53:57.768Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 08 May 2020 05:53:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1431","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: functions emulator started at http://localhost:5000
+[debug] [2020-05-08T05:53:57.788Z] [functions] Watching "/home/bhaskar/Documents/bstark/bstark.tech/functions" for Cloud Functions...
+[debug] [2020-05-08T05:53:57.797Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-05-08T05:53:57.797Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-05-08T05:53:57.797Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-05-08T05:53:57.797Z] DEBUG: [worker-~diagnostic~-c9aa08bf-75ec-4062-a7db-da7ce16dfaba]: Assigning socketPath: /tmp/fire_emu_34053.sock
+[debug] [2020-05-08T05:53:57.797Z] DEBUG: [worker-~diagnostic~-c9aa08bf-75ec-4062-a7db-da7ce16dfaba]: BUSY
+[debug] [2020-05-08T05:53:57.952Z] DEBUG: [runtime-status] [34053] Functions runtime initialized. {"cwd":"/home/bhaskar/Documents/bstark/bstark.tech/functions","node_version":"12.16.2"}
+[debug] [2020-05-08T05:53:57.952Z] DEBUG: [runtime-status] [34053] Disabled runtime features: undefined
+[debug] [2020-05-08T05:53:57.953Z] DEBUG: [runtime-status] [34053] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:53:57.953Z] DEBUG: [runtime-status] [34053] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:53:57.955Z] DEBUG: [runtime-status] [34053] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-05-08T05:53:57.973Z] DEBUG: [runtime-status] [34053] Checked functions.config() {"config":{}}
+[debug] [2020-05-08T05:53:57.973Z] DEBUG: [runtime-status] [34053] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:53:57.974Z] DEBUG: [runtime-status] [34053] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:53:57.974Z] DEBUG: [runtime-status] [34053] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:53:57.975Z] DEBUG: [runtime-status] [34053] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}}
+[warn] ⚠  /home/bhaskar/Documents/bstark/bstark.tech/functions/index.js:7
+export { sendMail } from "./functions/message"
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (internal/modules/cjs/loader.js:1070:16)
+    at Module._compile (internal/modules/cjs/loader.js:1120:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at /usr/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:661:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:5:58)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-05-08T05:53:57.990Z] DEBUG: [worker-~diagnostic~-c9aa08bf-75ec-4062-a7db-da7ce16dfaba]: exited
+[debug] [2020-05-08T05:53:57.990Z] DEBUG: [worker-~diagnostic~-c9aa08bf-75ec-4062-a7db-da7ce16dfaba]: FINISHED
+[debug] [2020-05-08T05:54:51.932Z] DEBUG: File /home/bhaskar/Documents/bstark/bstark.tech/functions/index.js changed, reloading triggers
+[debug] [2020-05-08T05:54:52.933Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-05-08T05:54:52.938Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-05-08T05:54:52.939Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-05-08T05:54:52.939Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-05-08T05:54:52.939Z] DEBUG: [worker-~diagnostic~-30d263b3-66d1-4b55-bde9-ed5c0ac23625]: Assigning socketPath: /tmp/fire_emu_34120.sock
+[debug] [2020-05-08T05:54:52.939Z] DEBUG: [worker-~diagnostic~-30d263b3-66d1-4b55-bde9-ed5c0ac23625]: BUSY
+[debug] [2020-05-08T05:54:53.102Z] DEBUG: [runtime-status] [34120] Functions runtime initialized. {"cwd":"/home/bhaskar/Documents/bstark/bstark.tech/functions","node_version":"12.16.2"}
+[debug] [2020-05-08T05:54:53.104Z] DEBUG: [runtime-status] [34120] Disabled runtime features: undefined
+[debug] [2020-05-08T05:54:53.104Z] DEBUG: [runtime-status] [34120] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:54:53.107Z] DEBUG: [runtime-status] [34120] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:54:53.107Z] DEBUG: [runtime-status] [34120] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-05-08T05:54:53.126Z] DEBUG: [runtime-status] [34120] Checked functions.config() {"config":{}}
+[debug] [2020-05-08T05:54:53.126Z] DEBUG: [runtime-status] [34120] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:54:53.127Z] DEBUG: [runtime-status] [34120] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:54:53.128Z] DEBUG: [runtime-status] [34120] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:54:53.128Z] DEBUG: [runtime-status] [34120] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}}
+[warn] ⚠  /home/bhaskar/Documents/bstark/bstark.tech/functions/functions/message.js:3
+export const sendMail = functions.firestore
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (internal/modules/cjs/loader.js:1070:16)
+    at Module._compile (internal/modules/cjs/loader.js:1120:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/bhaskar/Documents/bstark/bstark.tech/functions/index.js:7:20)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-05-08T05:54:53.145Z] DEBUG: [worker-~diagnostic~-30d263b3-66d1-4b55-bde9-ed5c0ac23625]: exited
+[debug] [2020-05-08T05:54:53.145Z] DEBUG: [worker-~diagnostic~-30d263b3-66d1-4b55-bde9-ed5c0ac23625]: FINISHED
+[debug] [2020-05-08T05:54:59.243Z] ----------------------------------------------------------------------
+[debug] [2020-05-08T05:54:59.244Z] Command:       /usr/bin/node /usr/bin/firebase functions:shell
+[debug] [2020-05-08T05:54:59.244Z] CLI Version:   8.2.0
+[debug] [2020-05-08T05:54:59.244Z] Platform:      linux
+[debug] [2020-05-08T05:54:59.244Z] Node Version:  v12.16.2
+[debug] [2020-05-08T05:54:59.244Z] Time:          Fri May 08 2020 11:24:59 GMT+0530 (India Standard Time)
+[debug] [2020-05-08T05:54:59.244Z] ----------------------------------------------------------------------
+[debug] [2020-05-08T05:54:59.244Z] 
+[debug] [2020-05-08T05:54:59.249Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-08T05:54:59.249Z] > authorizing via signed-in user
+[debug] [2020-05-08T05:54:59.249Z] [iam] checking project bstark-tech for permissions ["firebase.projects.get"]
+[debug] [2020-05-08T05:54:59.250Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bstark-tech:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-08T05:55:00.793Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 08 May 2020 05:55:00 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1358","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: functions emulator started at http://localhost:5000
+[debug] [2020-05-08T05:55:00.814Z] [functions] Watching "/home/bhaskar/Documents/bstark/bstark.tech/functions" for Cloud Functions...
+[debug] [2020-05-08T05:55:00.825Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-05-08T05:55:00.825Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-05-08T05:55:00.825Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-05-08T05:55:00.825Z] DEBUG: [worker-~diagnostic~-a4ce7275-ce8b-4519-8d1b-c2e557a8749d]: Assigning socketPath: /tmp/fire_emu_34168.sock
+[debug] [2020-05-08T05:55:00.826Z] DEBUG: [worker-~diagnostic~-a4ce7275-ce8b-4519-8d1b-c2e557a8749d]: BUSY
+[debug] [2020-05-08T05:55:01.000Z] DEBUG: [runtime-status] [34168] Functions runtime initialized. {"cwd":"/home/bhaskar/Documents/bstark/bstark.tech/functions","node_version":"12.16.2"}
+[debug] [2020-05-08T05:55:01.000Z] DEBUG: [runtime-status] [34168] Disabled runtime features: undefined
+[debug] [2020-05-08T05:55:01.002Z] DEBUG: [runtime-status] [34168] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:55:01.002Z] DEBUG: [runtime-status] [34168] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:01.004Z] DEBUG: [runtime-status] [34168] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-05-08T05:55:01.028Z] DEBUG: [runtime-status] [34168] Checked functions.config() {"config":{}}
+[debug] [2020-05-08T05:55:01.028Z] DEBUG: [runtime-status] [34168] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:01.029Z] DEBUG: [runtime-status] [34168] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:55:01.029Z] DEBUG: [runtime-status] [34168] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:01.030Z] DEBUG: [runtime-status] [34168] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}}
+[warn] ⚠  /home/bhaskar/Documents/bstark/bstark.tech/functions/functions/message.js:3
+export const sendMail = functions.firestore
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (internal/modules/cjs/loader.js:1070:16)
+    at Module._compile (internal/modules/cjs/loader.js:1120:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/bhaskar/Documents/bstark/bstark.tech/functions/index.js:7:20)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-05-08T05:55:01.044Z] DEBUG: [worker-~diagnostic~-a4ce7275-ce8b-4519-8d1b-c2e557a8749d]: exited
+[debug] [2020-05-08T05:55:01.044Z] DEBUG: [worker-~diagnostic~-a4ce7275-ce8b-4519-8d1b-c2e557a8749d]: FINISHED
+[debug] [2020-05-08T05:55:13.087Z] DEBUG: File /home/bhaskar/Documents/bstark/bstark.tech/functions/functions/message.js changed, reloading triggers
+[debug] [2020-05-08T05:55:14.088Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-05-08T05:55:14.097Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-05-08T05:55:14.097Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-05-08T05:55:14.097Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-05-08T05:55:14.098Z] DEBUG: [worker-~diagnostic~-bf54cae3-691f-4e4b-91ca-3b0e857caf5c]: Assigning socketPath: /tmp/fire_emu_34206.sock
+[debug] [2020-05-08T05:55:14.098Z] DEBUG: [worker-~diagnostic~-bf54cae3-691f-4e4b-91ca-3b0e857caf5c]: BUSY
+[debug] [2020-05-08T05:55:14.255Z] DEBUG: [runtime-status] [34206] Functions runtime initialized. {"cwd":"/home/bhaskar/Documents/bstark/bstark.tech/functions","node_version":"12.16.2"}
+[debug] [2020-05-08T05:55:14.256Z] DEBUG: [runtime-status] [34206] Disabled runtime features: undefined
+[debug] [2020-05-08T05:55:14.257Z] DEBUG: [runtime-status] [34206] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:55:14.259Z] DEBUG: [runtime-status] [34206] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:14.260Z] DEBUG: [runtime-status] [34206] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-05-08T05:55:14.283Z] DEBUG: [runtime-status] [34206] Checked functions.config() {"config":{}}
+[debug] [2020-05-08T05:55:14.283Z] DEBUG: [runtime-status] [34206] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:14.284Z] DEBUG: [runtime-status] [34206] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:55:14.284Z] DEBUG: [runtime-status] [34206] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:14.285Z] DEBUG: [runtime-status] [34206] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}}
+[warn] ⚠  /home/bhaskar/Documents/bstark/bstark.tech/functions/functions/message.js:3
+export const sendMail = functions.firestore
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (internal/modules/cjs/loader.js:1070:16)
+    at Module._compile (internal/modules/cjs/loader.js:1120:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Module.require (internal/modules/cjs/loader.js:1042:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/home/bhaskar/Documents/bstark/bstark.tech/functions/index.js:7:20)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2020-05-08T05:55:14.302Z] DEBUG: [worker-~diagnostic~-bf54cae3-691f-4e4b-91ca-3b0e857caf5c]: exited
+[debug] [2020-05-08T05:55:14.303Z] DEBUG: [worker-~diagnostic~-bf54cae3-691f-4e4b-91ca-3b0e857caf5c]: FINISHED
+[debug] [2020-05-08T05:55:32.644Z] DEBUG: File /home/bhaskar/Documents/bstark/bstark.tech/functions/functions/message.js changed, reloading triggers
+[debug] [2020-05-08T05:55:33.645Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-05-08T05:55:33.655Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-05-08T05:55:33.655Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-05-08T05:55:33.655Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-05-08T05:55:33.656Z] DEBUG: [worker-~diagnostic~-972a54e0-f68c-4e25-88f8-e978ee23cd88]: Assigning socketPath: /tmp/fire_emu_34242.sock
+[debug] [2020-05-08T05:55:33.656Z] DEBUG: [worker-~diagnostic~-972a54e0-f68c-4e25-88f8-e978ee23cd88]: BUSY
+[debug] [2020-05-08T05:55:33.798Z] DEBUG: [runtime-status] [34242] Functions runtime initialized. {"cwd":"/home/bhaskar/Documents/bstark/bstark.tech/functions","node_version":"12.16.2"}
+[debug] [2020-05-08T05:55:33.800Z] DEBUG: [runtime-status] [34242] Disabled runtime features: undefined
+[debug] [2020-05-08T05:55:33.800Z] DEBUG: [runtime-status] [34242] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:55:33.802Z] DEBUG: [runtime-status] [34242] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:33.804Z] DEBUG: [runtime-status] [34242] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-05-08T05:55:33.826Z] DEBUG: [runtime-status] [34242] Checked functions.config() {"config":{}}
+[debug] [2020-05-08T05:55:33.827Z] DEBUG: [runtime-status] [34242] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:33.828Z] DEBUG: [runtime-status] [34242] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:55:33.828Z] DEBUG: [runtime-status] [34242] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:33.828Z] DEBUG: [runtime-status] [34242] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-05-08T05:55:33.849Z] DEBUG: [runtime-status] [34242] initializeApp(DEFAULT) {"databaseURL":"https://bstark-tech.firebaseio.com","storageBucket":"bstark-tech.appspot.com","projectId":"bstark-tech","credential":{"certificate":{"projectId":"bstark-tech","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCZQzYuBpXlWME8\nle7VzBGRauh4vVWfFghMkDLeXlsjTgawyEnhNovikMLAMyalxRWkN/yoPocEDdXx\naD4jUy2pLusN88flKvjkOXBQB8Bw4IPA6Vobev6Qx2d0d/cF/VbW/db9wInVC4KT\nk+UnTe4C+nH5vcQEk4jnpK4GQXNoFruW88acs1bPbgwbb/IZn/ZC4SjPMyq3sHaZ\n7Mse7EeTYMxVRmbxjUppH0IBbftU0J8eSRNKflCfoWeHQUhgmtLeybOwXpfYeWGp\nwkPMIbwe7FNmA1AJ3d2TSwqnRW5p8TwKWc3Ap0FfccViQzhpdCNhbrbrZw2fpDUi\nTzmB3ZE7AgMBAAECggEARU5DfeS0fBX6rC8Q5dV2TFAP+CmGQn5wGk9K8YuxovFx\nzReFcTZ9Y2Ma7lczLttEwhIfSuWboJWxHY2KK+c9SrhQyupmhpc8HdhrlYUr3N9q\nNR5RBQRFgarqeZyWNDsvveDkC7O5oIGn9px2j6OJ8gbW65yIu5kL29R4bZPDYFnU\nK8oC66natL4aWtBorLVp0t+TrfXoFMeYs5cWlB+Ef+f8m1+fBsbGEZxAa2LravVa\nUSVra1bHrSuiM34Ej2x3+gLqJ41zpkXZtwmaPXXHF62fvREqiAJCVwXBBhIH83gM\nx9bkSbcUYJd+AbX+/86Okqg+mnLm+9giH69fLFf+oQKBgQDHn5QU326O5J1WLq/Z\nca2VnLeqFrjEzbI0zJXCaQ26hBL8SEIVLruGIMWlLnNLAyRjxyw3ehBh9GcYWlEf\n7Y74/nb5CjXywtQa6rVZHafBE7FwHdHyhMHAQB0zZxFUhs5+a1nlC2Wh6CB2rL2B\nBa4BrrDK9twpO7hdboMa7Nb21wKBgQDEi9PNVRYCxbu+ulB2HHClMurLaf7a4sZE\n4mJiEffoP74Rz1asBrMcffSh6A/hOrBMSLTilHYy6R4M+vkkJwWRVDjZCLTDLqYS\nN/2HoJ7pneZGC2g0Jn+Ag6fPnb7YxvmwqjKP3j28JcZQh6vJg6cMXmjF9W2LbaNe\nbKQDh6lAPQKBgQCbX+fgfzAMZIDaDaittL+JTdvetaTG+duVIRAHq8EVxasJViyp\nVCB9e5CayxbN8fom92XBIG8T7yk3WUT/duXrhBSSLpJjC6YP9VOFs4FY1L0tKOi6\nvP4ZZ03TLovcoLikyWXE0yQd6xEpjbZKcGNJx/CvaYlfRq5veo7tLB79LQKBgCJm\nDoWrVJTbooY4+YgSZiyjgrBjNrV8ZxL7RBjB6E9/iHZ5gUPOUF62NLB5ev4CVYSk\nXPQi46T5Y8cFzcDkC3dp9CEYAvr+GRarMfYgyG8+sWSk7nHiIwKNCDuv8gziliSz\nRPIlBUz+l3zUod486mmhxFiRIcD7SVJnVTVA8wBJAoGASWNocn8P0pqg80Xou742\nzMYF/nSmZUoDZ+rWmaHXyRYVTd/uDzxfQHuYSvcU3a7cv6CdzuhQwFjDVVCuTqb4\n+5egSAU6nyWFI3+ry7NxU0iPnVOcwimcFva108Co+GNGiQz54tSFsNYxeLeNgq/V\nPUe631tS39zhN3RoxotmMQY=\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-hvv71@bstark-tech.iam.gserviceaccount.com"},"httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}}
+[debug] [2020-05-08T05:55:33.852Z] DEBUG: [worker-~diagnostic~-972a54e0-f68c-4e25-88f8-e978ee23cd88]: IDLE
+[debug] [2020-05-08T05:55:33.852Z] [functions[sendMail-sendMail]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2020-05-08T05:55:43.964Z] ----------------------------------------------------------------------
+[debug] [2020-05-08T05:55:43.966Z] Command:       /usr/bin/node /usr/bin/firebase functions:shell
+[debug] [2020-05-08T05:55:43.966Z] CLI Version:   8.2.0
+[debug] [2020-05-08T05:55:43.966Z] Platform:      linux
+[debug] [2020-05-08T05:55:43.966Z] Node Version:  v12.16.2
+[debug] [2020-05-08T05:55:43.966Z] Time:          Fri May 08 2020 11:25:43 GMT+0530 (India Standard Time)
+[debug] [2020-05-08T05:55:43.966Z] ----------------------------------------------------------------------
+[debug] [2020-05-08T05:55:43.966Z] 
+[debug] [2020-05-08T05:55:43.970Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-08T05:55:43.970Z] > authorizing via signed-in user
+[debug] [2020-05-08T05:55:43.971Z] [iam] checking project bstark-tech for permissions ["firebase.projects.get"]
+[debug] [2020-05-08T05:55:43.973Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bstark-tech:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-08T05:55:46.003Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 08 May 2020 05:55:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1377","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: functions emulator started at http://localhost:5000
+[debug] [2020-05-08T05:55:46.022Z] [functions] Watching "/home/bhaskar/Documents/bstark/bstark.tech/functions" for Cloud Functions...
+[debug] [2020-05-08T05:55:46.033Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-05-08T05:55:46.034Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-05-08T05:55:46.034Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-05-08T05:55:46.034Z] DEBUG: [worker-~diagnostic~-fd05474f-a1c7-4a11-8e4e-c13a9a29b8cb]: Assigning socketPath: /tmp/fire_emu_34301.sock
+[debug] [2020-05-08T05:55:46.034Z] DEBUG: [worker-~diagnostic~-fd05474f-a1c7-4a11-8e4e-c13a9a29b8cb]: BUSY
+[debug] [2020-05-08T05:55:46.189Z] DEBUG: [runtime-status] [34301] Functions runtime initialized. {"cwd":"/home/bhaskar/Documents/bstark/bstark.tech/functions","node_version":"12.16.2"}
+[debug] [2020-05-08T05:55:46.189Z] DEBUG: [runtime-status] [34301] Disabled runtime features: undefined
+[debug] [2020-05-08T05:55:46.190Z] DEBUG: [runtime-status] [34301] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:55:46.190Z] DEBUG: [runtime-status] [34301] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:46.191Z] DEBUG: [runtime-status] [34301] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-05-08T05:55:46.212Z] DEBUG: [runtime-status] [34301] Checked functions.config() {"config":{}}
+[debug] [2020-05-08T05:55:46.213Z] DEBUG: [runtime-status] [34301] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:46.213Z] DEBUG: [runtime-status] [34301] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-05-08T05:55:46.213Z] DEBUG: [runtime-status] [34301] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-05-08T05:55:46.213Z] DEBUG: [runtime-status] [34301] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/bhaskar/Documents/bstark/bstark.tech/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-05-08T05:55:46.235Z] DEBUG: [runtime-status] [34301] initializeApp(DEFAULT) {"databaseURL":"https://bstark-tech.firebaseio.com","storageBucket":"bstark-tech.appspot.com","projectId":"bstark-tech","credential":{"certificate":{"projectId":"bstark-tech","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCZQzYuBpXlWME8\nle7VzBGRauh4vVWfFghMkDLeXlsjTgawyEnhNovikMLAMyalxRWkN/yoPocEDdXx\naD4jUy2pLusN88flKvjkOXBQB8Bw4IPA6Vobev6Qx2d0d/cF/VbW/db9wInVC4KT\nk+UnTe4C+nH5vcQEk4jnpK4GQXNoFruW88acs1bPbgwbb/IZn/ZC4SjPMyq3sHaZ\n7Mse7EeTYMxVRmbxjUppH0IBbftU0J8eSRNKflCfoWeHQUhgmtLeybOwXpfYeWGp\nwkPMIbwe7FNmA1AJ3d2TSwqnRW5p8TwKWc3Ap0FfccViQzhpdCNhbrbrZw2fpDUi\nTzmB3ZE7AgMBAAECggEARU5DfeS0fBX6rC8Q5dV2TFAP+CmGQn5wGk9K8YuxovFx\nzReFcTZ9Y2Ma7lczLttEwhIfSuWboJWxHY2KK+c9SrhQyupmhpc8HdhrlYUr3N9q\nNR5RBQRFgarqeZyWNDsvveDkC7O5oIGn9px2j6OJ8gbW65yIu5kL29R4bZPDYFnU\nK8oC66natL4aWtBorLVp0t+TrfXoFMeYs5cWlB+Ef+f8m1+fBsbGEZxAa2LravVa\nUSVra1bHrSuiM34Ej2x3+gLqJ41zpkXZtwmaPXXHF62fvREqiAJCVwXBBhIH83gM\nx9bkSbcUYJd+AbX+/86Okqg+mnLm+9giH69fLFf+oQKBgQDHn5QU326O5J1WLq/Z\nca2VnLeqFrjEzbI0zJXCaQ26hBL8SEIVLruGIMWlLnNLAyRjxyw3ehBh9GcYWlEf\n7Y74/nb5CjXywtQa6rVZHafBE7FwHdHyhMHAQB0zZxFUhs5+a1nlC2Wh6CB2rL2B\nBa4BrrDK9twpO7hdboMa7Nb21wKBgQDEi9PNVRYCxbu+ulB2HHClMurLaf7a4sZE\n4mJiEffoP74Rz1asBrMcffSh6A/hOrBMSLTilHYy6R4M+vkkJwWRVDjZCLTDLqYS\nN/2HoJ7pneZGC2g0Jn+Ag6fPnb7YxvmwqjKP3j28JcZQh6vJg6cMXmjF9W2LbaNe\nbKQDh6lAPQKBgQCbX+fgfzAMZIDaDaittL+JTdvetaTG+duVIRAHq8EVxasJViyp\nVCB9e5CayxbN8fom92XBIG8T7yk3WUT/duXrhBSSLpJjC6YP9VOFs4FY1L0tKOi6\nvP4ZZ03TLovcoLikyWXE0yQd6xEpjbZKcGNJx/CvaYlfRq5veo7tLB79LQKBgCJm\nDoWrVJTbooY4+YgSZiyjgrBjNrV8ZxL7RBjB6E9/iHZ5gUPOUF62NLB5ev4CVYSk\nXPQi46T5Y8cFzcDkC3dp9CEYAvr+GRarMfYgyG8+sWSk7nHiIwKNCDuv8gziliSz\nRPIlBUz+l3zUod486mmhxFiRIcD7SVJnVTVA8wBJAoGASWNocn8P0pqg80Xou742\nzMYF/nSmZUoDZ+rWmaHXyRYVTd/uDzxfQHuYSvcU3a7cv6CdzuhQwFjDVVCuTqb4\n+5egSAU6nyWFI3+ry7NxU0iPnVOcwimcFva108Co+GNGiQz54tSFsNYxeLeNgq/V\nPUe631tS39zhN3RoxotmMQY=\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-hvv71@bstark-tech.iam.gserviceaccount.com"},"httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}}
+[debug] [2020-05-08T05:55:46.237Z] DEBUG: [worker-~diagnostic~-fd05474f-a1c7-4a11-8e4e-c13a9a29b8cb]: IDLE
+[debug] [2020-05-08T05:55:46.238Z] [functions[sendMail-sendMail]] function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions: Loaded functions: sendMail.sendMail
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub

@@ -3,9 +3,11 @@
 		<div class="introData" style>
 			<h3>Bhaskar Nair</h3>
 			<p style>
-				<strong>Web Designer & Developer || Entrepreneur</strong>
+				<strong>Web Enthusiast || Entrepreneur</strong>
 				<br />Business Head @
-				<a href="https://www.optimustech.io">OptimusTech.io</a>
+				<a target="blank" href="http://www.optimustech.io"
+					>OptimusTech.io</a
+				>
 				<br />Drop me a message if you'd like to Grab a Coffee.
 				<v-icon class="icn" name="paper-plane" scale="1"></v-icon>&nbsp;
 			</p>

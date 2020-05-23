@@ -31,13 +31,23 @@
 					/>
 				</div>
 				<div class="inputBox">
+					<label for="subject">Subject</label>
+					<input
+						class="input"
+						id="subject"
+						required
+						type="text"
+						v-model="formData.subject"
+					/>
+				</div>
+				<div class="inputBox">
 					<label for="msg">Message</label>
 					<textarea
 						class="input"
 						cols="20"
 						id="msg"
-						rows="6"
 						required
+						rows="6"
 						v-model="formData.message"
 					/>
 				</div>
@@ -73,7 +83,15 @@ export default {
 			this.sending = true;
 			this.message = 'Sending Message...';
 			msgCollection
-				.add(this.formData)
+				.add({
+					to: 'b.bhaskar.nair@gmail.com',
+					from: this.formData.email,
+					replyTo: this.formData.email,
+					message: {
+						subject: `New message from ${this.formData.name}: ${this.formData.subject}`,
+						text: this.formData.message
+					}
+				})
 				.then(() => {
 					this.message = "YaY! I'll get back to you Soon!";
 					setTimeout(this.closeModal, 1000);

@@ -1,7 +1,11 @@
 <template>
 	<div>
 		<div id="mainCont">
-			<blogCards></blogCards>
+			<!-- <blogCards></blogCards> -->
+			<h1>
+				<v-icon class="icn" name="wrench" scale="2"></v-icon>&nbsp; Under
+				Construction...
+			</h1>
 		</div>
 		<!-- Title -->
 		<!-- Subtitle-1 -->
@@ -19,7 +23,7 @@
 export default {
 	name: 'BlogReader',
 	components: {
-		blogCards: () => import('@/components/blogComps/blogCards')
+		// blogCards: () => import('@/components/blogComps/blogCards')
 	}
 };
 </script>
