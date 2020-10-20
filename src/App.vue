@@ -26,7 +26,7 @@ export default {
 <style lang="scss">
 @import '@/theme/main.scss';
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat&display=swap');
-$textFont: 'Montserrat';
+$textFont: 'Montserrat', sans-serif;
 
 #app {
 	font-family: $textFont;
