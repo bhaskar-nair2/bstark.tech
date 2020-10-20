@@ -6,7 +6,7 @@
 			</button>
 		</div>
 		<div class="content">
-			<img :src="dets.imgUrl" class="color modalImg" loading="lazy" />
+			<img :src="dets.imgUrl" class="color modalImg" loading="eager" />
 		</div>
 		<div class="intro" v-if="dets.name == 'disp'">
 			<intro></intro>
@@ -17,7 +17,8 @@
 		<img
 			:class="{ color: modal || color, wavy: wavy }"
 			rel="preload"
-			v-lazy="dets.imgUrl"
+			:src="dets.imgUrl"
+			loading="eager"
 		/>
 	</div>
 </template>
