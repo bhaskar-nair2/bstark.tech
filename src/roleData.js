@@ -78,7 +78,7 @@ const role = [
 			caption: 'Give it a try',
 			vidUrl: 'https://www.youtube.com/embed/qtGWaQ-arnw?rel=0&vq=large',
 			imgUrl:
-				'https://s3.amazonaws.com/factmag-images/wp-content/uploads/2016/04/02162215/FACT30BestPostRockAlbums-illustrationJosephGough.jpg'
+				'https://firebasestorage.googleapis.com/v0/b/bstark-tech.appspot.com/o/FACT30BestPostRockAlbums-illustrationJosephGough.jpg?alt=media&token=52f62dc3-25ba-4d06-aa85-fd57e9a00dba'
 		}
 	},
 	{
@@ -123,7 +123,7 @@ const role = [
 			caption: 'This song..',
 			vidUrl: 'https://www.youtube.com/embed/fhauhH4FR84',
 			imgUrl:
-				'http://utopianmagazine.com/wp-content/uploads/2019/05/Kendrick-Lamar-Lil-wayne-mona-lisa-utopianmagazine-1024x1024.jpg'
+				'https://firebasestorage.googleapis.com/v0/b/bstark-tech.appspot.com/o/Kendrick-Lamar-Lil-wayne-mona-lisa-utopianmagazine-1024x1024.jpg?alt=media&token=89744a36-9021-4405-a940-6b6de441e05b'
 		}
 	},
 	{
