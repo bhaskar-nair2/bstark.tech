@@ -149,7 +149,7 @@ const role = [
 		props: {
 			name: 'stackoverflow',
 			link:
-				'https://stackoverflow.com/users/4347232/bhaskar?tab=profile',
+				'https://stackoverflow.com/users/story/4347232',
 			icon: 'brands/stack-overflow'
 		}
 	},
