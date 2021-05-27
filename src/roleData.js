@@ -148,8 +148,7 @@ const role = [
 		priority: 1,
 		props: {
 			name: 'stackoverflow',
-			link:
-				'https://stackoverflow.com/users/story/4347232',
+			link: 'https://stackoverflow.com/users/story/4347232',
 			icon: 'brands/stack-overflow'
 		}
 	},
