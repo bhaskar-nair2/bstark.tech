@@ -39,6 +39,10 @@ export default {
 				site: 'stackoverflow',
 				link: 'https://stackoverflow.com/story/bhaskar_nair2'
 			}
+			// {
+			// 	site: 'TabEazy',
+			// 	link: 'https://tabeazy.com/'
+			// }
 		]
 	}),
 	created() {
@@ -116,7 +120,7 @@ export default {
 	// Function
 	display: flex;
 	flex-wrap: wrap;
-	place-content: start;
+	// place-content: start;
 	text-align: left;
 	// Deco
 	box-shadow: 3px 3px 4px rgba($color: #000000, $alpha: 0.25),
